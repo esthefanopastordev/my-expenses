@@ -8,40 +8,42 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var balanceLabel: UILabel!
-
+    
     @IBOutlet weak var transactionsTableView: UITableView!
-
+    
+    var transactionsMocked = [
+        Transaction(name: "Burger", amount: 17, date: Date(), categoryId: "ABC", type: "gasto", description: "", images: [""]),
+        Transaction(name: "Shoes", amount: 199.99, date: Date(), categoryId: "DEF", type: "gasto", description: "Nice shoes", images: [""]),
+        Transaction(name: "Dress", amount: 80, date: Date(), categoryId: "GHI", type: "gasto", description: "", images: [""]),
+        Transaction(name: "Sueldo", amount: 2500, date: Date(), categoryId: "JKL", type: "ingreso", description: "", images: [""])
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         transactionsTableView.dataSource = self
         transactionsTableView.delegate = self
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return transactionsMocked.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell") as? TransactionTableViewCell else { return UITableViewCell() }
         
-        cell.nameLabel.text = "Hola"
+        let transaction = transactionsMocked[indexPath.row]
+        let amountPrefix = transaction.type == "gasto" ? "-$" : "$"
+        
+        cell.nameLabel.text = transaction.name
+        cell.montoLabel.text = amountPrefix + String(transaction.amount)
+        cell.montoLabel.textColor = transaction.type == "gasto" ? UIColor.systemRed : UIColor.systemGreen
+        cell.categoryIconImageView.tintColor = transaction.type == "gasto" ? UIColor.systemRed : UIColor.systemGreen
         
         return cell
     }
