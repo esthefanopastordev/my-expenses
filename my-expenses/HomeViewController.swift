@@ -10,7 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var balanceLabel: UILabel!
-    
+    @IBOutlet weak var ingresosTotalesLabel: UILabel!
+    @IBOutlet weak var gastosTotales: UILabel!
     @IBOutlet weak var transactionsTableView: UITableView!
     
     var transactionsMocked = [
@@ -25,6 +26,25 @@ class HomeViewController: UIViewController {
         
         transactionsTableView.dataSource = self
         transactionsTableView.delegate = self
+        
+        var gastos = transactionsMocked.filter{ $0.type == "gasto" }
+        var ingresos = transactionsMocked.filter{ $0.type == "ingreso" }
+        var totalIngresos = 0.00
+        var totalGastos = 0.00
+        
+        for ingreso in ingresos {
+             totalIngresos += ingreso.amount
+        }
+        
+        for gasto in gastos {
+            totalGastos += gasto.amount
+        }
+        
+        let balanceTotal = totalIngresos - totalGastos
+        
+        balanceLabel.text = "$\(String(balanceTotal))"
+        ingresosTotalesLabel.text = "$\(String(totalIngresos))"
+        gastosTotales.text = "$\(String(totalGastos))"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

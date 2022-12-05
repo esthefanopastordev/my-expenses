@@ -64,19 +64,27 @@
 		021BA9BF292F987F00EF9FA3 /* my-expenses */ = {
 			isa = PBXGroup;
 			children = (
+				A5A82F4C293E9F840015B460 /* models */,
 				021BA9C0292F987F00EF9FA3 /* AppDelegate.swift */,
 				021BA9C2292F987F00EF9FA3 /* SceneDelegate.swift */,
 				021BA9C6292F987F00EF9FA3 /* Main.storyboard */,
 				A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */,
 				A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */,
 				A5ADEA5E293D00110026E583 /* HomeViewController.swift */,
-				A5ADEA5C293CFCB40026E583 /* Transaction.swift */,
 				021BA9C9292F988300EF9FA3 /* Assets.xcassets */,
 				021BA9CB292F988300EF9FA3 /* LaunchScreen.storyboard */,
 				021BA9CE292F988300EF9FA3 /* Info.plist */,
 				A5A82F4A293E90820015B460 /* AddTransactionViewController.swift */,
 			);
 			path = "my-expenses";
+			sourceTree = "<group>";
+		};
+		A5A82F4C293E9F840015B460 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A5ADEA5C293CFCB40026E583 /* Transaction.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
