@@ -28,13 +28,17 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nav = segue.destination as? UINavigationController
+        
         if (segue.identifier == "TransactionDetailsSegue") {
-            let nav = segue.destination as? UINavigationController
             guard let destination = nav?.viewControllers.first as? TransactionDetailsViewController else { return }
             guard let selectedRow = transactionsTableView.indexPathForSelectedRow?.row else { return }
             
             let transaction = transactionsMocked[selectedRow]
             destination.transaction = transaction
+        } else if (segue.identifier == "AddTransactionSegue") {
+            guard let destination = nav?.viewControllers.first as? AddTransactionViewController else { return }
+            destination.delegate = self
         }
     }
     
@@ -67,6 +71,9 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
-extension HomeViewController {
-    
+extension HomeViewController: AddTransactionViewControllerDelegate {
+    func addTransactionView(_ addTransactionView: AddTransactionViewController, didCreateTransaction newTransaction: Transaction) {
+        transactionsMocked.append(newTransaction)
+        transactionsTableView.reloadData()
+    }
 }

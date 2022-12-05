@@ -197,7 +197,7 @@
                     <navigationItem key="navigationItem" id="XeW-Cd-2K4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Pj-im-YEJ">
                             <connections>
-                                <segue destination="2RD-zI-NVT" kind="presentation" id="yRC-mI-uHw"/>
+                                <segue destination="2RD-zI-NVT" kind="presentation" identifier="AddTransactionSegue" id="yRC-mI-uHw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -385,10 +385,10 @@
             </objects>
             <point key="canvasLocation" x="-483.20610687022901" y="3065.4929577464791"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Transaction View Controller-->
         <scene sceneID="lwS-sM-V9d">
             <objects>
-                <viewController id="8ja-eZ-5gb" sceneMemberID="viewController">
+                <viewController id="8ja-eZ-5gb" customClass="AddTransactionViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qYd-cP-Rdu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,15 +483,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
+                                <connections>
+                                    <action selector="addFileTapped:" destination="8ja-eZ-5gb" eventType="touchUpInside" id="fHA-PU-3Df"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H4C-tS-4zZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jsw-pu-C6Y">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mT5-G6-iJc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iCi-M7-d5N"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mT5-G6-iJc">
+                            <connections>
+                                <action selector="cancelTapped:" destination="8ja-eZ-5gb" id="K7V-Cl-c7D"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iCi-M7-d5N">
+                            <connections>
+                                <action selector="doneTapped:" destination="8ja-eZ-5gb" id="LWH-is-Imb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="rfG-at-09Z" id="uFU-Ma-ZAB"/>
+                        <outlet property="descriptionTextView" destination="Qpl-Rl-kp7" id="vvf-Mu-uvg"/>
+                        <outlet property="nameTextField" destination="yCi-Sd-vjR" id="IYS-Go-JLz"/>
+                        <outlet property="typeButton" destination="ddv-Gq-Ey6" id="SOy-5J-D68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4r-2y-JIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

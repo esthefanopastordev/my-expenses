@@ -13,6 +13,7 @@
 		021BA9CA292F988300EF9FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021BA9C9292F988300EF9FA3 /* Assets.xcassets */; };
 		021BA9CD292F988300EF9FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BA9CB292F988300EF9FA3 /* LaunchScreen.storyboard */; };
 		A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */; };
+		A5A82F4B293E90820015B460 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F4A293E90820015B460 /* AddTransactionViewController.swift */; };
 		A5ADEA5D293CFCB40026E583 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* Transaction.swift */; };
 		A5ADEA5F293D00110026E583 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5E293D00110026E583 /* HomeViewController.swift */; };
 		A5ADEA63293D46E50026E583 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 		021BA9CC292F988300EF9FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021BA9CE292F988300EF9FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		A5A82F4A293E90820015B460 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		A5ADEA5C293CFCB40026E583 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A5ADEA5E293D00110026E583 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				021BA9C9292F988300EF9FA3 /* Assets.xcassets */,
 				021BA9CB292F988300EF9FA3 /* LaunchScreen.storyboard */,
 				021BA9CE292F988300EF9FA3 /* Info.plist */,
+				A5A82F4A293E90820015B460 /* AddTransactionViewController.swift */,
 			);
 			path = "my-expenses";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				A5ADEA5D293CFCB40026E583 /* Transaction.swift in Sources */,
 				A5ADEA63293D46E50026E583 /* TransactionTableViewCell.swift in Sources */,
 				A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */,
+				A5A82F4B293E90820015B460 /* AddTransactionViewController.swift in Sources */,
 				A5ADEA5F293D00110026E583 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
