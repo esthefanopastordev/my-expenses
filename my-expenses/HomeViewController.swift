@@ -14,10 +14,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var transactionsTableView: UITableView!
     
     var transactionsMocked = [
-        Transaction(name: "Burger", amount: 17, date: Date(), categoryId: "ABC", type: "gasto", description: "", images: [""]),
-        Transaction(name: "Shoes", amount: 199.99, date: Date(), categoryId: "DEF", type: "gasto", description: "Nice shoes", images: [""]),
-        Transaction(name: "Dress", amount: 80, date: Date(), categoryId: "GHI", type: "gasto", description: "", images: [""]),
-        Transaction(name: "Sueldo", amount: 2500, date: Date(), categoryId: "JKL", type: "ingreso", description: "", images: [""])
+        Transaction(id: "b5615569-a59a-4d39-bcd9-fe4601997cda", name: "Burger", amount: 17, date: Date(), categoryId: "ABC", type: "gasto", description: "", images: [""]),
+        Transaction(id: "1f7dcd58-153a-4079-876d-f4efc4eb72f7", name: "Shoes", amount: 199.99, date: Date(), categoryId: "DEF", type: "gasto", description: "Nice shoes", images: [""]),
+        Transaction(id: "f3652ca5-446f-4d37-9ad7-9fcfdb3d3be4", name: "Dress", amount: 80, date: Date(), categoryId: "GHI", type: "gasto", description: "", images: [""]),
+        Transaction(id: "56706c62-9047-4819-81a9-89ed14e3649e", name: "Sueldo", amount: 2500, date: Date(), categoryId: "JKL", type: "ingreso", description: "", images: [""])
     ]
     
     override func viewDidLoad() {
@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
             
             let transaction = transactionsMocked[selectedRow]
             destination.transaction = transaction
+            destination.delegate = self
         } else if (segue.identifier == "AddTransactionSegue") {
             guard let destination = nav?.viewControllers.first as? AddTransactionViewController else { return }
             destination.delegate = self
@@ -66,7 +67,6 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -74,6 +74,13 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: AddTransactionViewControllerDelegate {
     func addTransactionView(_ addTransactionView: AddTransactionViewController, didCreateTransaction newTransaction: Transaction) {
         transactionsMocked.append(newTransaction)
+        transactionsTableView.reloadData()
+    }
+}
+
+extension HomeViewController: TransactionDetailsViewControllerDelegate {
+    func transactionDetailsView(_ transactionDetailsView: TransactionDetailsViewController, didRemoveTransaction transactionId: String) {
+        transactionsMocked = transactionsMocked.filter{ $0.id != transactionId }
         transactionsTableView.reloadData()
     }
 }

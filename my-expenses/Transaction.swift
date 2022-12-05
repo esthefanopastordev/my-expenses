@@ -8,6 +8,7 @@
 import Foundation
 
 struct Transaction {
+    let id: String
     let name: String
     let amount: Double
     let date: Date
@@ -16,7 +17,8 @@ struct Transaction {
     let description: String
     let images: [String]
     
-    init(name: String, amount: Double, date: Date, categoryId: String, type: String, description: String, images: [String]) {
+    init(id: String, name: String, amount: Double, date: Date, categoryId: String, type: String, description: String, images: [String]) {
+        self.id = id
         self.name = name
         self.amount = amount
         self.date = date

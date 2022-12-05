@@ -49,7 +49,7 @@ class AddTransactionViewController: UIViewController {
         guard let amount = amountTextField.text, !amount.isEmpty else { return }
         guard let type = typeButton.titleLabel?.text else { return }
         
-        let newTransaction = Transaction(name: name, amount: 10.00, date: Date(), categoryId: "", type: type, description: "", images: [""])
+        let newTransaction = Transaction(id: "0ffd4eaa-09a1-4846-87b4-07a683fd2975", name: name, amount: 10.00, date: Date(), categoryId: "", type: type, description: "", images: [""])
                                          
         print(newTransaction.type)
         

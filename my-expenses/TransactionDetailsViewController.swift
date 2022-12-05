@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TransactionDetailsViewControllerDelegate {
+    func transactionDetailsView(_ transactionDetailsView: TransactionDetailsViewController, didRemoveTransaction transactionId: String)
+}
+
 class TransactionDetailsViewController: UIViewController {
     
     @IBOutlet weak var amountLabel: UILabel!
@@ -17,6 +21,7 @@ class TransactionDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var transaction: Transaction?
+    var delegate: TransactionDetailsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,9 @@ class TransactionDetailsViewController: UIViewController {
     }
     
     @IBAction func deleteTapped(_ sender: UIBarButtonItem) {
-        print("Delete tapped")
+        guard let transactionId = transaction?.id else { return }
+        
+        delegate?.transactionDetailsView(self, didRemoveTransaction: transactionId)
         
         dismiss(animated: true)
     }
