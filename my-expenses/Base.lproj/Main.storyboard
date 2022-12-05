@@ -184,7 +184,7 @@
                                             <outlet property="categoryNameLabel" destination="dIx-mi-6ty" id="hXE-Fs-LqJ"/>
                                             <outlet property="montoLabel" destination="k9a-Zg-Isd" id="nmD-KN-eZg"/>
                                             <outlet property="nameLabel" destination="asS-BL-eDJ" id="3Yi-Nm-M0b"/>
-                                            <segue destination="HE2-nE-hqm" kind="presentation" id="gzF-34-rTZ"/>
+                                            <segue destination="HE2-nE-hqm" kind="presentation" identifier="TransactionDetailsSegue" id="gzF-34-rTZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="443.51145038167937" y="3065.4929577464791"/>
         </scene>
-        <!--View Controller-->
+        <!--Transaction Details View Controller-->
         <scene sceneID="sec-R6-l10">
             <objects>
-                <viewController id="qNA-EQ-bIN" sceneMemberID="viewController">
+                <viewController id="qNA-EQ-bIN" customClass="TransactionDetailsViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUy-YE-C7m">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,8 +321,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6sb-Uy-fZ9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="YOM-YZ-pE2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="YOM-YZ-pE2">
+                            <connections>
+                                <action selector="deleteTapped:" destination="qNA-EQ-bIN" id="fTH-Di-Uvu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountLabel" destination="q1Q-EB-2ya" id="Zp9-Dl-AlU"/>
+                        <outlet property="categoryNameLabel" destination="QT7-sV-ux3" id="dCY-0F-fNu"/>
+                        <outlet property="dateLabel" destination="y0l-8Q-hBw" id="S2O-U7-ggn"/>
+                        <outlet property="descriptionTextView" destination="8ES-b8-nbg" id="Dmc-Ck-2gl"/>
+                        <outlet property="nameLabel" destination="deR-fF-b2J" id="bGy-jx-esD"/>
+                        <outlet property="typeLabel" destination="1rj-CV-vDc" id="9SS-7J-IZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbg-wc-8lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

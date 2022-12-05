@@ -27,6 +27,17 @@ class HomeViewController: UIViewController {
         transactionsTableView.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "TransactionDetailsSegue") {
+            let nav = segue.destination as? UINavigationController
+            guard let destination = nav?.viewControllers.first as? TransactionDetailsViewController else { return }
+            guard let selectedRow = transactionsTableView.indexPathForSelectedRow?.row else { return }
+            
+            let transaction = transactionsMocked[selectedRow]
+            destination.transaction = transaction
+        }
+    }
+    
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -51,8 +62,11 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hola")
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+extension HomeViewController {
+    
 }

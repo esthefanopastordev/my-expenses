@@ -19,8 +19,7 @@ class TransactionTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        print("HOLA CELL")
+
         // Initialization code
     }
 
