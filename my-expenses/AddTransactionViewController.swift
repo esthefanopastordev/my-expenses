@@ -47,11 +47,19 @@ class AddTransactionViewController: UIViewController {
         // TODO: logica para agregar transaction
         guard let name = nameTextField.text, !name.isEmpty else { return }
         guard let amount = amountTextField.text, !amount.isEmpty else { return }
+        guard let doubleAmount = Double(amount) else { return }
         guard let type = typeButton.titleLabel?.text else { return }
-        
-        let newTransaction = Transaction(id: "0ffd4eaa-09a1-4846-87b4-07a683fd2975", name: name, amount: 10.00, date: Date(), categoryId: "", type: type, description: "", images: [""])
-                                         
-        print(newTransaction.type)
+
+        let newTransaction = Transaction(
+            id: "0ffd4eaa-09a1-4846-87b4-07a683fd2975",
+            name: name,
+            amount: doubleAmount,
+            date: Date(),
+            categoryId: "",
+            type: type.lowercased(),
+            description: "",
+            images: [""]
+        )
         
         delegate?.addTransactionView(self, didCreateTransaction: newTransaction)
         

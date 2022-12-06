@@ -27,8 +27,12 @@ class HomeViewController: UIViewController {
         transactionsTableView.dataSource = self
         transactionsTableView.delegate = self
         
-        var gastos = transactionsMocked.filter{ $0.type == "gasto" }
-        var ingresos = transactionsMocked.filter{ $0.type == "ingreso" }
+        setupLabels()
+    }
+    
+    func setupLabels() {
+        let gastos = transactionsMocked.filter{ $0.type == "gasto" }
+        let ingresos = transactionsMocked.filter{ $0.type == "ingreso" }
         var totalIngresos = 0.00
         var totalGastos = 0.00
         
@@ -95,6 +99,7 @@ extension HomeViewController: AddTransactionViewControllerDelegate {
     func addTransactionView(_ addTransactionView: AddTransactionViewController, didCreateTransaction newTransaction: Transaction) {
         transactionsMocked.append(newTransaction)
         transactionsTableView.reloadData()
+        setupLabels()
     }
 }
 
@@ -102,5 +107,6 @@ extension HomeViewController: TransactionDetailsViewControllerDelegate {
     func transactionDetailsView(_ transactionDetailsView: TransactionDetailsViewController, didRemoveTransaction transactionId: String) {
         transactionsMocked = transactionsMocked.filter{ $0.id != transactionId }
         transactionsTableView.reloadData()
+        setupLabels()
     }
 }
