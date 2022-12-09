@@ -16,15 +16,4 @@ struct Transaction {
     let type: String
     let description: String
     let images: [String]
-    
-    init(id: String, name: String, amount: Double, date: Date, categoryId: String, type: String, description: String, images: [String]) {
-        self.id = id
-        self.name = name
-        self.amount = amount
-        self.date = date
-        self.categoryId = categoryId
-        self.type = type
-        self.description = description
-        self.images = images
-    }
 }
