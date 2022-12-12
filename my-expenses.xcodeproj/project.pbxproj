@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02123B9E2943DB0900B093AD /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02123B9D2943DB0900B093AD /* CategoriasViewController.swift */; };
+		02123BA02943DC9300B093AD /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02123B9F2943DC9300B093AD /* Categoria.swift */; };
+		02123BA22943DCA400B093AD /* Tipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02123BA12943DCA400B093AD /* Tipo.swift */; };
+		02123BA42943E40200B093AD /* CategoriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02123BA32943E40200B093AD /* CategoriaTableViewCell.swift */; };
 		021BA9C1292F987F00EF9FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BA9C0292F987F00EF9FA3 /* AppDelegate.swift */; };
 		021BA9C3292F987F00EF9FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BA9C2292F987F00EF9FA3 /* SceneDelegate.swift */; };
 		021BA9C8292F987F00EF9FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BA9C6292F987F00EF9FA3 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02123B9D2943DB0900B093AD /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
+		02123B9F2943DC9300B093AD /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		02123BA12943DCA400B093AD /* Tipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipo.swift; sourceTree = "<group>"; };
+		02123BA32943E40200B093AD /* CategoriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaTableViewCell.swift; sourceTree = "<group>"; };
 		021BA9BD292F987F00EF9FA3 /* my-expenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-expenses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		021BA9C0292F987F00EF9FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021BA9C2292F987F00EF9FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,8 @@
 				021BA9C0292F987F00EF9FA3 /* AppDelegate.swift */,
 				021BA9C2292F987F00EF9FA3 /* SceneDelegate.swift */,
 				021BA9C6292F987F00EF9FA3 /* Main.storyboard */,
+				02123B9D2943DB0900B093AD /* CategoriasViewController.swift */,
+				02123BA32943E40200B093AD /* CategoriaTableViewCell.swift */,
 				A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */,
 				A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */,
 				A5ADEA5E293D00110026E583 /* HomeViewController.swift */,
@@ -83,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				A5ADEA5C293CFCB40026E583 /* Transaction.swift */,
+				02123B9F2943DC9300B093AD /* Categoria.swift */,
+				02123BA12943DCA400B093AD /* Tipo.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -159,9 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				021BA9C1292F987F00EF9FA3 /* AppDelegate.swift in Sources */,
+				02123BA22943DCA400B093AD /* Tipo.swift in Sources */,
 				021BA9C3292F987F00EF9FA3 /* SceneDelegate.swift in Sources */,
+				02123B9E2943DB0900B093AD /* CategoriasViewController.swift in Sources */,
 				A5ADEA5D293CFCB40026E583 /* Transaction.swift in Sources */,
+				02123BA42943E40200B093AD /* CategoriaTableViewCell.swift in Sources */,
 				A5ADEA63293D46E50026E583 /* TransactionTableViewCell.swift in Sources */,
+				02123BA02943DC9300B093AD /* Categoria.swift in Sources */,
 				A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */,
 				A5A82F4B293E90820015B460 /* AddTransactionViewController.swift in Sources */,
 				A5ADEA5F293D00110026E583 /* HomeViewController.swift in Sources */,
