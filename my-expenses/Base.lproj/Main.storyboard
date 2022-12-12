@@ -76,7 +76,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7rk-mx-DGV">
-                                        <rect key="frame" x="8" y="10.333333333333332" width="51" height="45.333333333333343"/>
+                                        <rect key="frame" x="8" y="10.333333333333332" width="51" height="45.333333333333336"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <imageReference key="image" image="tray.and.arrow.down.fill" catalog="system" symbolScale="default"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="36" scale="default"/>
@@ -316,12 +316,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXl-t4-7Fn">
-                                <rect key="frame" x="170" y="714" width="54" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Archivos adjuntos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Oh-GdQ">
                                 <rect key="frame" x="16" y="477" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -348,6 +342,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6sb-Uy-fZ9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="GDd-Kt-Oii"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="YOM-YZ-pE2">
                             <connections>
                                 <action selector="deleteTapped:" destination="qNA-EQ-bIN" id="fTH-Di-Uvu"/>
