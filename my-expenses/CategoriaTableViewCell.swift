@@ -9,6 +9,11 @@ import UIKit
 
 class CategoriaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconoImageView: UIImageView?
+    @IBOutlet weak var nombreLabel: UILabel?
+    @IBOutlet weak var numeroDeItemsLabel: UILabel?
+    @IBOutlet weak var montoTotalLabel: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

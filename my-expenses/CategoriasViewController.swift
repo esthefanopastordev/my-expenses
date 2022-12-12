@@ -43,8 +43,15 @@ extension CategoriasViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = categorias[indexPath.row].nombre
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as? CategoriaTableViewCell else { return UITableViewCell() }
+        
+        let categoria = categorias[indexPath.row]
+        let tipo = tipos.first(where: { $0.id == categoria.tipo })
+        
+        cell.nombreLabel?.text = categoria.nombre
+        cell.montoTotalLabel?.text = "$300"
+        cell.numeroDeItemsLabel?.text = "3 items"
+        cell.iconoImageView?.tintColor = tipo?.name == "Gasto" ? UIColor.systemRed : UIColor.systemGreen
         
         return cell
     }
