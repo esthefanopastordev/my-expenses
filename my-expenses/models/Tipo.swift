@@ -11,3 +11,9 @@ struct Tipo {
     let id: String
     let name: String
 }
+
+enum SomeEnumeration {
+    case gasto
+    case ingreso
+}
+
