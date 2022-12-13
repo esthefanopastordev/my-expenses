@@ -16,7 +16,7 @@ class CategoriasViewController: UIViewController {
         Tipo(id: "DEF", name: "Ingreso")
     ]
     
-    let categorias = [
+    var categorias = [
         Categoria(id: "ABC", nombre: "Transporte", tipo: "ABC", icono: "hola"),
         Categoria(id: "DEF", nombre: "Sueldo base", tipo: "DEF", icono: "hola")
     ]
@@ -34,11 +34,11 @@ class CategoriasViewController: UIViewController {
             let categoriaSeleccionada = categorias[indexPath!.row]
             
             let nav = segue.destination as? UINavigationController
-            
             let destination = nav?.viewControllers.first as? DetalleCategoriaViewController
             
             destination?.title = categoriaSeleccionada.nombre
-            
+            destination?.setCategoria(categoria: categoriaSeleccionada)
+            destination?.delegate = self
         }
     }
 
@@ -76,5 +76,12 @@ extension CategoriasViewController: UITableViewDataSource {
 extension CategoriasViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension CategoriasViewController: DetalleCategoriaViewControllerDelegate {
+    func detalleCategoriaView(_ viewController: DetalleCategoriaViewController, didRemoveCategory categoryId: String) {
+        categorias = categorias.filter({ $0.id != categoryId })
+        categoriasTableView?.reloadData()
     }
 }
