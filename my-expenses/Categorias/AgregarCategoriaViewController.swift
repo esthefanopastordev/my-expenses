@@ -12,7 +12,10 @@ class AgregarCategoriaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Agregar Categoría"
+        
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     

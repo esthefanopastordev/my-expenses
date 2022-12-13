@@ -16,4 +16,7 @@ class DetalleCategoriaViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
+    @IBAction func didDeleteTap(_ sender: UIBarButtonItem) {
+        print("Deleted")
+    }
 }
