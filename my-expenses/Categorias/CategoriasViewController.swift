@@ -25,6 +25,21 @@ class CategoriasViewController: UIViewController {
         super.viewDidLoad()
         
         categoriasTableView?.dataSource = self
+        categoriasTableView?.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "DetalleCategoriaSegue") {
+            let indexPath = categoriasTableView?.indexPathForSelectedRow
+            let categoriaSeleccionada = categorias[indexPath!.row]
+            
+            let nav = segue.destination as? UINavigationController
+            
+            let destination = nav?.viewControllers.first as? DetalleCategoriaViewController
+            
+            destination?.title = categoriaSeleccionada.nombre
+            
+        }
     }
 
 }
@@ -56,5 +71,10 @@ extension CategoriasViewController: UITableViewDataSource {
         return cell
     }
     
-    
+}
+
+extension CategoriasViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
