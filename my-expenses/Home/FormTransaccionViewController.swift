@@ -7,25 +7,26 @@
 
 import UIKit
 
-protocol AddTransactionViewControllerDelegate {
-    func addTransactionView(_ addTransactionView: AddTransactionViewController, didCreateTransaction newTransaction: Transaction)
+protocol FormTransaccionViewDelegate {
+    func formTransaccionView(_ formTransaccionView: FormTransaccionViewController, didCreateTransaction nuevaTransaccion: Transaccion)
 }
 
-class AddTransactionViewController: UIViewController {
+class FormTransaccionViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var typeButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     var transactionType: String?
-    var delegate: AddTransactionViewControllerDelegate?
+    var delegate: FormTransaccionViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         setupTypeButton()
+        navigationBar.shadowImage = UIImage() // Remove default navigation bar shadow
     }
     
     func setupTypeButton() {
@@ -39,34 +40,28 @@ class AddTransactionViewController: UIViewController {
         typeButton.changesSelectionAsPrimaryAction = true
     }
     
-    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+    @IBAction func didCancelTap(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
-    @IBAction func doneTapped(_ sender: UIBarButtonItem) {
-        // TODO: logica para agregar transaction
+    @IBAction func didDoneTap(_ sender: UIBarButtonItem) {
         guard let name = nameTextField.text, !name.isEmpty else { return }
         guard let amount = amountTextField.text, !amount.isEmpty else { return }
         guard let doubleAmount = Double(amount) else { return }
         guard let type = typeButton.titleLabel?.text else { return }
 
-        let newTransaction = Transaction(
+        let nuevaTransaccion = Transaccion(
             id: "0ffd4eaa-09a1-4846-87b4-07a683fd2975",
-            name: name,
-            amount: doubleAmount,
-            date: Date(),
-            categoryId: "",
-            type: type.lowercased(),
-            description: "",
-            images: [""]
+            nombre: name,
+            cantidad: doubleAmount,
+            fecha: "2022-12-14T21:44:12Z",
+            categoriaId: "",
+            tipo: type.lowercased(),
+            descripcion: ""
         )
         
-        delegate?.addTransactionView(self, didCreateTransaction: newTransaction)
+        delegate?.formTransaccionView(self, didCreateTransaction: nuevaTransaccion)
         
         dismiss(animated: true)
     }
-    
-    @IBAction func addFileTapped(_ sender: UIButton) {
-    }
-    
 }

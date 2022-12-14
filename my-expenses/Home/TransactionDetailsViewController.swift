@@ -20,7 +20,7 @@ class TransactionDetailsViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    var transaction: Transaction?
+    var transaction: Transaccion?
     var delegate: TransactionDetailsViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -40,9 +40,9 @@ class TransactionDetailsViewController: UIViewController {
 
 extension TransactionDetailsViewController {
     func setup() {
-        amountLabel.text = "$\(transaction?.amount ?? 0.00)"
-        nameLabel.text = transaction?.name
-        typeLabel.text = transaction?.type
+        amountLabel.text = "$\(transaction?.cantidad ?? 0.00)"
+        nameLabel.text = transaction?.nombre
+        typeLabel.text = transaction?.tipo
         // TODO: Obtener el resto de datos
         dateLabel.text = "Lunes 05 de Diciembre 2022"
         categoryNameLabel.text = "Transporte"
