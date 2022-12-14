@@ -8,25 +8,22 @@
 import UIKit
 
 class AgregarCategoriaViewController: UIViewController {
+    @IBOutlet weak var nombreTextField: UITextField?
+    @IBOutlet weak var tipoButton: UIButton?
+    @IBOutlet weak var iconoTextField: UITextField? // TODO: implementar dropdown de SF Symbols
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Agregar Categoría"
-        
-        // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    @IBAction func didDoneTap(_ sender: UIBarButtonItem) {
+        print("Done tapped")
+        dismiss(animated: true)
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    @IBAction func didCancelTap(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }

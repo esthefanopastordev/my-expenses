@@ -7,12 +7,7 @@
 
 import Foundation
 
-struct Tipo {
-    let id: String
-    let name: String
-}
-
-enum SomeEnumeration {
+enum Tipo: String, CaseIterable {
     case gasto
     case ingreso
 }

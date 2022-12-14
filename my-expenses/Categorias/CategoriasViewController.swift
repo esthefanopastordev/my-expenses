@@ -10,15 +10,10 @@ import UIKit
 class CategoriasViewController: UIViewController {
     
     @IBOutlet weak var categoriasTableView: UITableView?
-    
-    let tipos = [
-        Tipo(id: "ABC", name: "Gasto"),
-        Tipo(id: "DEF", name: "Ingreso")
-    ]
-    
+
     var categorias = [
-        Categoria(id: "ABC", nombre: "Transporte", tipo: "ABC", icono: "hola"),
-        Categoria(id: "DEF", nombre: "Sueldo base", tipo: "DEF", icono: "hola")
+        Categoria(id: "ABC", nombre: "Transporte", tipo: "gasto", icono: "hola"),
+        Categoria(id: "DEF", nombre: "Sueldo base", tipo: "ingreso", icono: "hola")
     ]
 
     override func viewDidLoad() {
@@ -26,6 +21,10 @@ class CategoriasViewController: UIViewController {
         
         categoriasTableView?.dataSource = self
         categoriasTableView?.delegate = self
+        
+        let ingreso = Tipo.ingreso
+        print(ingreso)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,11 +45,18 @@ class CategoriasViewController: UIViewController {
 
 extension CategoriasViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tipos.count
+        return Tipo.allCases.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tipos[section].name
+        if (section == 0) {
+            return Tipo.gasto.rawValue
+        }
+        if (section == 1) {
+            return Tipo.ingreso.rawValue
+        }
+        
+        return ""
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,12 +67,11 @@ extension CategoriasViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as? CategoriaTableViewCell else { return UITableViewCell() }
         
         let categoria = categorias[indexPath.row]
-        let tipo = tipos.first(where: { $0.id == categoria.tipo })
         
         cell.nombreLabel?.text = categoria.nombre
         cell.montoTotalLabel?.text = "$300"
         cell.numeroDeItemsLabel?.text = "3 items"
-        cell.iconoImageView?.tintColor = tipo?.name == "Gasto" ? UIColor.systemRed : UIColor.systemGreen
+        cell.iconoImageView?.tintColor = "Gasto" == "Gasto" ? UIColor.systemRed : UIColor.systemGreen
         
         return cell
     }

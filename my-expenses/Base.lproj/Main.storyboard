@@ -165,9 +165,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yid-29-kiZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zUf-KY-GL3"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="o7O-dp-Ydt"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zUf-KY-GL3">
+                            <connections>
+                                <action selector="didCancelTap:" destination="mta-eI-XZy" id="FyN-DY-W5u"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="o7O-dp-Ydt">
+                            <connections>
+                                <action selector="didDoneTap:" destination="mta-eI-XZy" id="kgm-Xa-vrN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="iconoTextField" destination="9tt-oe-VqS" id="xdr-EP-Ecu"/>
+                        <outlet property="nombreTextField" destination="dQd-3z-oRD" id="eCy-og-u79"/>
+                        <outlet property="tipoButton" destination="669-dv-SZ4" id="si1-XQ-KU5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdy-Vv-B5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
