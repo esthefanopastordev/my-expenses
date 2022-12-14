@@ -17,6 +17,13 @@ class ListaPresupuestosViewController: UIViewController {
         presupuestosTableView.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "agregarPresupuestoSegue") {
+            let nav = segue.destination as? UINavigationController
+            let destination = nav?.viewControllers.first as? AgregarPresupuestoViewController
+            destination?.delegate = self
+        }
+    }
 }
 
 extension ListaPresupuestosViewController: UITableViewDataSource {
@@ -35,5 +42,11 @@ extension ListaPresupuestosViewController: UITableViewDataSource {
 extension ListaPresupuestosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension ListaPresupuestosViewController: AgregarPresupuestoViewControllerDelegate {
+    func agregarPresupuestoView(_ viewController: AgregarPresupuestoViewController, didCreatePresupuesto presupuesto: Presupuesto) {
+        print("Did create presupuesto")
     }
 }

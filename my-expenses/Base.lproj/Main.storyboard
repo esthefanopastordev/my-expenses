@@ -261,7 +261,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gzh-vf-PSA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw">
+                            <connections>
+                                <segue destination="FBF-w7-erP" kind="show" identifier="agregarPresupuestoSegue" id="RXC-3n-fCb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="presupuestosTableView" destination="6Hi-Pt-GCJ" id="HgW-fH-nc3"/>
@@ -270,6 +274,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sb7-0a-0tx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443.51145038167937" y="5400.7042253521131"/>
+        </scene>
+        <!--Agregar Presupuesto View Controller-->
+        <scene sceneID="EVp-vu-hQY">
+            <objects>
+                <viewController id="jjN-iq-sdr" customClass="AgregarPresupuestoViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ir3-Ru-Pgn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl3-zs-daA">
+                                <rect key="frame" x="16" y="103" width="49" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx3-PI-jM3">
+                                <rect key="frame" x="16" y="173.33333333333334" width="74" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBN-LD-u0Q">
+                                <rect key="frame" x="16" y="131.33333333333334" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZv-Tv-4QF">
+                                <rect key="frame" x="16" y="200.66666666666666" width="361" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <menu key="menu" id="DsF-F0-uxH">
+                                    <children>
+                                        <command title="Item 1" id="GpW-xa-UdG"/>
+                                        <command title="Item 2" id="vBN-h1-e7F"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C5b-Dj-0aV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zx3-PI-jM3" firstAttribute="leading" secondItem="C5b-Dj-0aV" secondAttribute="leading" constant="16" id="5MD-G7-EcF"/>
+                            <constraint firstItem="hZv-Tv-4QF" firstAttribute="top" secondItem="zx3-PI-jM3" secondAttribute="bottom" constant="8" symbolic="YES" id="72R-0s-riT"/>
+                            <constraint firstItem="hZv-Tv-4QF" firstAttribute="leading" secondItem="C5b-Dj-0aV" secondAttribute="leading" constant="16" id="7VE-Gp-m1w"/>
+                            <constraint firstItem="zx3-PI-jM3" firstAttribute="top" secondItem="aBN-LD-u0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="P8V-Tc-WEW"/>
+                            <constraint firstItem="C5b-Dj-0aV" firstAttribute="trailing" secondItem="aBN-LD-u0Q" secondAttribute="trailing" constant="16" id="V2H-bj-sJs"/>
+                            <constraint firstItem="C5b-Dj-0aV" firstAttribute="trailing" secondItem="hZv-Tv-4QF" secondAttribute="trailing" constant="16" id="ZMn-dr-WQd"/>
+                            <constraint firstItem="hl3-zs-daA" firstAttribute="leading" secondItem="C5b-Dj-0aV" secondAttribute="leading" constant="16" id="bhy-hD-oLL"/>
+                            <constraint firstItem="aBN-LD-u0Q" firstAttribute="leading" secondItem="C5b-Dj-0aV" secondAttribute="leading" constant="16" id="fP9-gb-trW"/>
+                            <constraint firstItem="hl3-zs-daA" firstAttribute="top" secondItem="C5b-Dj-0aV" secondAttribute="top" id="ubB-AU-OTF"/>
+                            <constraint firstItem="aBN-LD-u0Q" firstAttribute="top" secondItem="hl3-zs-daA" secondAttribute="bottom" constant="8" symbolic="YES" id="ypB-TR-cVb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KAG-zX-rpz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P4p-Fk-HeJ">
+                            <connections>
+                                <action selector="didCancelTap:" destination="jjN-iq-sdr" id="wcN-NP-aUG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uLk-8N-fH6">
+                            <connections>
+                                <action selector="didDoneTap:" destination="jjN-iq-sdr" id="04K-aV-jFo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoriaButton" destination="hZv-Tv-4QF" id="L5A-2a-3T3"/>
+                        <outlet property="montoTextField" destination="aBN-LD-u0Q" id="qfo-3K-F7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqe-uQ-vm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2544.2748091603053" y="5400.7042253521131"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="i9f-ez-tyi">
@@ -977,6 +1054,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fA-gJ-c7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-483.20610687022901" y="5400.7042253521131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WUg-dY-6kd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FBF-w7-erP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vbu-ad-FLj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sla-8Z-WzZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jjN-iq-sdr" kind="relationship" relationship="rootViewController" id="2jk-ij-Vdf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJj-5J-nHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617.5572519083969" y="5400.7042253521131"/>
         </scene>
     </scenes>
     <resources>
