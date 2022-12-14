@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class HomeViewController: UIViewController {
         Transaccion(id: "56706c62-9047-4819-81a9-89ed14e3649e", nombre: "Sueldo", cantidad: 2500, fecha: "2022-12-14T21:44:12Z", categoriaId: "JKL", tipo: "ingreso", descripcion: "")
     ]
     
+    var transacciones: [Transaccion] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,20 +32,24 @@ class HomeViewController: UIViewController {
         
         setupLabels()
         
-        let current = Date()
+        let db = Firestore.firestore()
         
-        let newFormatter = ISO8601DateFormatter()
+        db.collection("transaccion").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    do {
+                        let tra = try document.data(as: TransaccionResponse.self)
+                        print("Desc \(tra.descripcion)")
+                    } catch {
+                        print("Error \(err)")
+                    }
+                    
+                }
+            }
+        }
         
-        let stringDate = newFormatter.string(from: current)
-        let dateDate = newFormatter.date(from: stringDate)
-        
-//        let date = newFormatter.date(from: "2022-01-31T02:22:40Z")
-        
-        
-
-        print("Fecha actual \(stringDate)")
-        print("Fecha actual Fecha no format \(current)")
-        print("Fecha actual Fecha \(dateDate)")
     }
     
     func setupLabels() {
