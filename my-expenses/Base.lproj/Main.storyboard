@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yno-fK-Guh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400.76335877862596" y="3671.8309859154933"/>
+            <point key="canvasLocation" x="401" y="4277"/>
         </scene>
         <!--Agregar Categoria View Controller-->
         <scene sceneID="5Gm-Ag-4bh">
@@ -189,20 +189,87 @@
         <!--Presupuestos-->
         <scene sceneID="hht-gq-JJ7">
             <objects>
-                <viewController id="d1A-Hu-ilY" sceneMemberID="viewController">
+                <viewController id="d1A-Hu-ilY" customClass="ListaPresupuestosViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gk2-T7-bai">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-Pt-GCJ">
+                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="presupuestoCell" rowHeight="107" id="zKR-Cb-UKq">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zKR-Cb-UKq" id="rsK-f7-gnM">
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$500 restantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-dH-occ">
+                                                    <rect key="frame" x="20" y="37" width="117" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$500 de $1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-fX-iqy">
+                                                    <rect key="frame" x="20" y="78" width="106" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk6-nS-B0S">
+                                                    <rect key="frame" x="50" y="11" width="75" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-R1-xSa">
+                                                    <rect key="frame" x="20" y="12.333333333333336" width="22" height="15.666666666666666"/>
+                                                    <imageReference key="image" image="car.fill" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15" scale="default"/>
+                                                </imageView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-ja-Q6Q">
+                                                    <rect key="frame" x="20" y="66" width="302.66666666666669" height="4"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zk6-nS-B0S" firstAttribute="leading" secondItem="0tF-R1-xSa" secondAttribute="trailing" constant="8" id="1mj-FP-XgJ"/>
+                                                <constraint firstItem="rxy-fX-iqy" firstAttribute="leading" secondItem="rsK-f7-gnM" secondAttribute="leadingMargin" id="ARo-EC-1L7"/>
+                                                <constraint firstItem="QoQ-dH-occ" firstAttribute="top" secondItem="Zk6-nS-B0S" secondAttribute="bottom" constant="8" id="D0f-CW-q39"/>
+                                                <constraint firstItem="rxy-fX-iqy" firstAttribute="bottom" secondItem="rsK-f7-gnM" secondAttribute="bottomMargin" id="GiZ-wc-5I6"/>
+                                                <constraint firstItem="M4R-ja-Q6Q" firstAttribute="top" secondItem="QoQ-dH-occ" secondAttribute="bottom" constant="8" id="Rcm-Iy-pj0"/>
+                                                <constraint firstItem="rxy-fX-iqy" firstAttribute="top" secondItem="M4R-ja-Q6Q" secondAttribute="bottom" constant="8" id="f9E-Vp-eNB"/>
+                                                <constraint firstItem="0tF-R1-xSa" firstAttribute="top" secondItem="rsK-f7-gnM" secondAttribute="topMargin" id="fZQ-Se-6Ev"/>
+                                                <constraint firstItem="Zk6-nS-B0S" firstAttribute="top" secondItem="rsK-f7-gnM" secondAttribute="topMargin" id="fwa-2Q-brd"/>
+                                                <constraint firstItem="0tF-R1-xSa" firstAttribute="leading" secondItem="rsK-f7-gnM" secondAttribute="leadingMargin" id="oc8-Gd-lwV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="M4R-ja-Q6Q" secondAttribute="trailing" id="rN0-oA-A72"/>
+                                                <constraint firstItem="QoQ-dH-occ" firstAttribute="leading" secondItem="rsK-f7-gnM" secondAttribute="leadingMargin" id="utH-Z7-Obe"/>
+                                                <constraint firstItem="M4R-ja-Q6Q" firstAttribute="leading" secondItem="rsK-f7-gnM" secondAttribute="leadingMargin" id="xx5-xB-x61"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Jx-q3-Ql2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Hi-Pt-GCJ" firstAttribute="top" secondItem="4Jx-q3-Ql2" secondAttribute="top" id="LN3-5f-fP0"/>
+                            <constraint firstItem="6Hi-Pt-GCJ" firstAttribute="bottom" secondItem="4Jx-q3-Ql2" secondAttribute="bottom" id="Nom-Aw-u0R"/>
+                            <constraint firstItem="4Jx-q3-Ql2" firstAttribute="trailing" secondItem="6Hi-Pt-GCJ" secondAttribute="trailing" constant="16" id="Yhi-5d-SR0"/>
+                            <constraint firstItem="6Hi-Pt-GCJ" firstAttribute="leading" secondItem="4Jx-q3-Ql2" secondAttribute="leading" constant="16" id="xwj-ET-UUa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Presupuestos" id="zTg-K7-wOa">
                         <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="default"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="presupuestosTableView" destination="6Hi-Pt-GCJ" id="HgW-fH-nc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sb7-0a-0tx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483" y="4277"/>
+            <point key="canvasLocation" x="-483.20610687022901" y="5400.7042253521131"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="i9f-ez-tyi">
@@ -535,7 +602,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baK-m6-W8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1398" y="3727"/>
+            <point key="canvasLocation" x="-1798" y="4277"/>
         </scene>
         <!--Home-->
         <scene sceneID="MtD-ar-KrB">
@@ -776,7 +843,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPh-ou-w8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483" y="3672"/>
+            <point key="canvasLocation" x="-483" y="4277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c6x-5M-CMa">
@@ -893,6 +960,7 @@
     </scenes>
     <resources>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
+        <image name="car.fill" catalog="system" width="128" height="95"/>
         <image name="list.bullet.clipboard.fill" catalog="system" width="103" height="128"/>
         <image name="pill.circle.fill" catalog="system" width="128" height="123"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
