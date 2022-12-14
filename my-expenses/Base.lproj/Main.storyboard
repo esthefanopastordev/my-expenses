@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2542.7480916030531" y="3671.8309859154933"/>
         </scene>
-        <!--Presupuestos-->
+        <!--Lista Presupuestos View Controller-->
         <scene sceneID="hht-gq-JJ7">
             <objects>
                 <viewController id="d1A-Hu-ilY" customClass="ListaPresupuestosViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
@@ -195,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-Pt-GCJ">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <rect key="frame" x="16" y="103" width="361" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="presupuestoCell" rowHeight="107" id="zKR-Cb-UKq">
@@ -260,16 +260,16 @@
                             <constraint firstItem="6Hi-Pt-GCJ" firstAttribute="leading" secondItem="4Jx-q3-Ql2" secondAttribute="leading" constant="16" id="xwj-ET-UUa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Presupuestos" id="zTg-K7-wOa">
-                        <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="default"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Gzh-vf-PSA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="presupuestosTableView" destination="6Hi-Pt-GCJ" id="HgW-fH-nc3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sb7-0a-0tx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483.20610687022901" y="5400.7042253521131"/>
+            <point key="canvasLocation" x="443.51145038167937" y="5400.7042253521131"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="i9f-ez-tyi">
@@ -597,7 +597,7 @@
                     <connections>
                         <segue destination="ZoY-kI-LqJ" kind="relationship" relationship="viewControllers" id="Ksx-Ea-tZq"/>
                         <segue destination="hjg-xO-1iu" kind="relationship" relationship="viewControllers" id="8LS-V9-OWc"/>
-                        <segue destination="d1A-Hu-ilY" kind="relationship" relationship="viewControllers" id="8gu-Pr-FnO"/>
+                        <segue destination="fuJ-xh-INa" kind="relationship" relationship="viewControllers" id="8gu-Pr-FnO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baK-m6-W8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -956,6 +956,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82a-ZL-2Bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1618" y="4277"/>
+        </scene>
+        <!--Presupuestos-->
+        <scene sceneID="06w-CW-MRy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fuJ-xh-INa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Presupuestos" id="zTg-K7-wOa">
+                        <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1uE-po-2Bz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d1A-Hu-ilY" kind="relationship" relationship="rootViewController" id="fG0-pk-DYv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fA-gJ-c7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483.20610687022901" y="5400.7042253521131"/>
         </scene>
     </scenes>
     <resources>
