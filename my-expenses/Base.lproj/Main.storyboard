@@ -87,7 +87,7 @@
                     <navigationItem key="navigationItem" id="CmY-sf-g9U">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bjQ-t7-MbJ">
                             <connections>
-                                <segue destination="f9L-fZ-Pom" kind="show" id="NOM-QY-EKx"/>
+                                <segue destination="f9L-fZ-Pom" kind="show" identifier="agregarCategoriaSegue" id="NOM-QY-EKx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

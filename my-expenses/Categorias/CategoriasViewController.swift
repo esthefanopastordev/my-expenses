@@ -28,6 +28,8 @@ class CategoriasViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nav = segue.destination as? UINavigationController
+        
         if (segue.identifier == "DetalleCategoriaSegue") {
             let indexPath = categoriasTableView?.indexPathForSelectedRow
             let categoriaSeleccionada = categorias[indexPath!.row]
@@ -37,6 +39,9 @@ class CategoriasViewController: UIViewController {
             
             destination?.title = categoriaSeleccionada.nombre
             destination?.setCategoria(categoria: categoriaSeleccionada)
+            destination?.delegate = self
+        } else if (segue.identifier == "agregarCategoriaSegue") {
+            let destination = nav?.viewControllers.first as? AgregarCategoriaViewController
             destination?.delegate = self
         }
     }
@@ -87,6 +92,13 @@ extension CategoriasViewController: UITableViewDelegate {
 extension CategoriasViewController: DetalleCategoriaViewControllerDelegate {
     func detalleCategoriaView(_ viewController: DetalleCategoriaViewController, didRemoveCategory categoryId: String) {
         categorias = categorias.filter({ $0.id != categoryId })
+        categoriasTableView?.reloadData()
+    }
+}
+
+extension CategoriasViewController: AgregarCategoriaViewDelegate {
+    func agregarCategoriaView(_ agregarCategoriaViewController: AgregarCategoriaViewController, didCreateCategory categoria: Categoria) {
+        categorias.append(categoria)
         categoriasTableView?.reloadData()
     }
 }

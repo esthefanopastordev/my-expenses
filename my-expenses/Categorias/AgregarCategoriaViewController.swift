@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol AgregarCategoriaViewDelegate {
+    func agregarCategoriaView(_ agregarCategoriaViewController: AgregarCategoriaViewController, didCreateCategory categoria: Categoria)
+}
+
 class AgregarCategoriaViewController: UIViewController {
-    @IBOutlet weak var nombreTextField: UITextField?
-    @IBOutlet weak var tipoButton: UIButton?
-    @IBOutlet weak var iconoTextField: UITextField? // TODO: implementar dropdown de SF Symbols
+    @IBOutlet weak var nombreTextField: UITextField!
+    @IBOutlet weak var tipoButton: UIButton!
+    @IBOutlet weak var iconoTextField: UITextField! // TODO: implementar dropdown de SF Symbols
+
+    var delegate: AgregarCategoriaViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +25,13 @@ class AgregarCategoriaViewController: UIViewController {
     }
     
     @IBAction func didDoneTap(_ sender: UIBarButtonItem) {
-        print("Done tapped")
+        guard let nombre = nombreTextField.text, !nombre.isEmpty else { return }
+        let tipo = "Ingreso"
+        guard let icono = iconoTextField.text, !icono.isEmpty else { return }
+        
+        let categoria = Categoria(id: "Hola", nombre: nombre, tipo: tipo, icono: icono)
+        
+        delegate?.agregarCategoriaView(self, didCreateCategory: categoria)
         dismiss(animated: true)
     }
     
