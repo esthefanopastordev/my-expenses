@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DetalleTransaccionInteractorProtocol {
-    func eliminar(by transaccionId: String)
+    func eliminar(por id: String)
 }
 
 class DetalleTransaccionInteractor: DetalleTransaccionInteractorProtocol {
@@ -20,8 +20,11 @@ class DetalleTransaccionInteractor: DetalleTransaccionInteractorProtocol {
         self.api = api
     }
     
-    func eliminar(by transaccionId: String) {
-        // TODO: call API
-        presenter?.dismiss()
+    @MainActor
+    func eliminar(por id: String) {
+        Task.init {
+            try await api?.deleteTransaccion(por: id)
+            presenter?.dismiss()
+        }
     }
 }

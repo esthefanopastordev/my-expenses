@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 protocol RemoteRepository {
     func fetchTransacciones() async throws -> [TransaccionResponse]
-    func deleteTransaccion(by id: String) async throws -> Void
+    func deleteTransaccion(por id: String) async throws -> Void
     
     func fetchCategorias() async throws -> [CategoriaResponse]
     
@@ -26,7 +26,7 @@ class FirebaseAPI: RemoteRepository {
         return querySnapshot.documents.compactMap { document in try? document.data(as: TransaccionResponse.self) }
     }
     
-    func deleteTransaccion(by id: String) async throws {
+    func deleteTransaccion(por id: String) async throws {
         let docRef = db.collection("transaccion")
         let querySnapshot = docRef.document(id)
         try await querySnapshot.delete()

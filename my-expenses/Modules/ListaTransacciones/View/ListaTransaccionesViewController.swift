@@ -48,8 +48,7 @@ extension ListaTransaccionesViewController: ListaTransaccionesViewProtocol {
     }
     
     func recargar() {
-        print("Recargar después de eliminar")
-        transactionsTableView.reloadData()
+        presenter?.viewWillApper()
     }
 }
 

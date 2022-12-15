@@ -9,7 +9,7 @@ import Foundation
 
 protocol DetalleTransaccionPresenterProtocol {
     func getDetalle() -> TransaccionResponse
-    func eliminarTransaccion()
+    func didDeleteTap()
     func dismiss()
 }
 
@@ -28,8 +28,9 @@ class DetalleTransaccionPresenter: DetalleTransaccionPresenterProtocol {
         return detalle
     }
     
-    func eliminarTransaccion() {
-        interactor?.eliminar(by: detalle.descripcion)
+    func didDeleteTap() {
+        guard let id = detalle.id else { return }
+        interactor?.eliminar(por: id)
     }
     
     func dismiss() {

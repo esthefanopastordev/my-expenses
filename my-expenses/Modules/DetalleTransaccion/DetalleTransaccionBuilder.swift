@@ -17,7 +17,7 @@ class DetalleTransaccionBuilder {
     
     func build(_ detalle: TransaccionResponse) -> UIViewController {
         let router = DetalleTransaccionRouter(delegate: delegate!)
-        print(detalle.descripcion)
+
         let presenter = DetalleTransaccionPresenter(detalle: detalle)
         
         let api = FirebaseAPI()

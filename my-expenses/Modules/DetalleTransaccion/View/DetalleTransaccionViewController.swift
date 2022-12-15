@@ -33,8 +33,8 @@ class DetalleTransaccionViewController: UIViewController {
         navigationBar.shadowImage = UIImage() // Remove default navigation bar shadow
     }
     
-    @IBAction func deleteTapped(_ sender: UIBarButtonItem) {
-        presenter?.eliminarTransaccion()
+    @IBAction func didDeleteTap(_ sender: UIBarButtonItem) {
+        presenter?.didDeleteTap()
     }
 }
 
