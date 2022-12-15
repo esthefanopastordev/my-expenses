@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 protocol ListaTransaccionesViewProtocol: AnyObject {
     func listar(_ transacciones: [TransaccionResponse])
+    func recargar()
 }
 
 class ListaTransaccionesViewController: UIViewController {
@@ -43,6 +44,11 @@ class ListaTransaccionesViewController: UIViewController {
 extension ListaTransaccionesViewController: ListaTransaccionesViewProtocol {
     func listar(_ transacciones: [TransaccionResponse]) {
         self.transacciones = transacciones
+        transactionsTableView.reloadData()
+    }
+    
+    func recargar() {
+        print("Recargar después de eliminar")
         transactionsTableView.reloadData()
     }
 }

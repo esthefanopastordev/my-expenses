@@ -17,13 +17,24 @@ class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     var presenter: ListaTransaccionesPresenterProtocol?
     var view: UIViewController?
     
+    var detalleTransaccionBuilder: DetalleTransaccionBuilder?
+    
     func mostrar(_ transaccion: TransaccionResponse) {
-        let vc = DetalleTransaccionBuilder.build(transaccion)
-        view?.show(vc, sender: nil)
+        detalleTransaccionBuilder = DetalleTransaccionBuilder()
+        detalleTransaccionBuilder?.delegate = self
+        
+        let detalleTransaccionViewController = detalleTransaccionBuilder!.build(transaccion)
+        view?.show(detalleTransaccionViewController, sender: nil)
     }
     
     func mostrarForm() {
         let vc = FormTransaccionBuilder.build()
         view?.show(vc, sender: nil)
+    }
+}
+
+extension ListaTransaccionesRouter: DetalleTransaccionBuilderDelegate {
+    func detalleTransaccionBuilder(didDelete viewController: UIViewController) {
+        presenter?.recargar()
     }
 }

@@ -12,6 +12,7 @@ protocol ListaTransaccionesPresenterProtocol {
     func listar(_ transacciones: [TransaccionResponse])
     func presentarDetalle(_ transaccion: TransaccionResponse)
     func presentarForm()
+    func recargar()
 }
 
 class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
@@ -33,5 +34,9 @@ class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
     
     func presentarForm() {
         router?.mostrarForm()
+    }
+    
+    func recargar() {
+        view?.recargar()
     }
 }
