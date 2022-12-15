@@ -22,7 +22,6 @@ class ListaCategoriasInteractor: ListaCategoriasInteractorProtocol {
     
     @MainActor
     func categorias() {
-        print("Hola CategoriasInteractor")
         Task.init {
             guard let categorias = try await api?.fetchCategorias() else { return }
             presenter?.listar(categorias)

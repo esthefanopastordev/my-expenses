@@ -22,7 +22,6 @@ class ListaPresupuestosInteractor: ListaPresupuestosInteractorProtocol {
     
     @MainActor
     func presupuestos() {
-        print("Hola PresupuestoInteractor")
         Task.init {
             guard let presupuestos = try await api?.fetchPresupuestos() else { return }
             presenter?.listar(presupuestos)

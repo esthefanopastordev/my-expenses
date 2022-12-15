@@ -23,7 +23,6 @@ class ListaTransaccionesInteractor: ListaTransaccionesInteractorProtocol {
     
     @MainActor
     func transacciones() {
-        print("Hola Interactor")
         Task.init {
             guard let transacciones = try await api?.fetchTransacciones() else { return }
             presenter?.listar(transacciones)

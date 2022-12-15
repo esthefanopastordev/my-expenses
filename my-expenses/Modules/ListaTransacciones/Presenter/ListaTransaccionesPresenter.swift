@@ -10,6 +10,7 @@ import Foundation
 protocol ListaTransaccionesPresenterProtocol {
     func viewWillApper()
     func listar(_ transacciones: [TransaccionResponse])
+    func presentarDetalle(_ transaccion: TransaccionResponse)
 }
 
 class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
@@ -23,5 +24,9 @@ class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
     
     func listar(_ transacciones: [TransaccionResponse]) {
         view?.listar(transacciones)
+    }
+    
+    func presentarDetalle(_ transaccion: TransaccionResponse) {
+        router?.mostrar(transaccion)
     }
 }

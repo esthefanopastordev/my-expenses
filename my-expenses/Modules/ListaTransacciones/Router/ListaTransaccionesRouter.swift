@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ListaTransaccionesRouterProtocol {
-    
+    func mostrar(_ transaccion: TransaccionResponse)
 }
 
 class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     var presenter: ListaTransaccionesPresenterProtocol?
+    var view: UIViewController?
+    
+    func mostrar(_ transaccion: TransaccionResponse) {
+        let vc = DetalleTransaccionBuilder.build(transaccion)
+        view?.show(vc, sender: nil)
+    }
 }

@@ -18,6 +18,7 @@
 		021BA9CA292F988300EF9FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021BA9C9292F988300EF9FA3 /* Assets.xcassets */; };
 		021BA9CD292F988300EF9FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BA9CB292F988300EF9FA3 /* LaunchScreen.storyboard */; };
 		02395F7B294B76E400F1A029 /* PresupuestoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02395F7A294B76E400F1A029 /* PresupuestoResponse.swift */; };
+		02395F83294B7B4100F1A029 /* DetalleTransaccionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02395F82294B7B4100F1A029 /* DetalleTransaccionBuilder.swift */; };
 		023AA06D294A2FC500FF03E3 /* ListaPresupuestosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA06C294A2FC500FF03E3 /* ListaPresupuestosViewController.swift */; };
 		023AA06F294A38A200FF03E3 /* AgregarPresupuestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA06E294A38A200FF03E3 /* AgregarPresupuestoViewController.swift */; };
 		023AA071294A40D700FF03E3 /* Presupuesto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA070294A40D700FF03E3 /* Presupuesto.swift */; };
@@ -41,7 +42,7 @@
 		029E0511294AD2FD0021E8E8 /* ListaCategoriasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0510294AD2FD0021E8E8 /* ListaCategoriasPresenter.swift */; };
 		029E0513294AD3080021E8E8 /* ListaCategoriasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0512294AD3080021E8E8 /* ListaCategoriasInteractor.swift */; };
 		029E0515294AD44F0021E8E8 /* ListaCategoriasBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0514294AD44F0021E8E8 /* ListaCategoriasBuilder.swift */; };
-		A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */; };
+		A5A82F49293E7C6E0015B460 /* DetalleTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */; };
 		A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */; };
 		A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* Transaccion.swift */; };
 		A5ADEA5F293D00110026E583 /* ListaTransaccionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */; };
@@ -62,6 +63,7 @@
 		021BA9CC292F988300EF9FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021BA9CE292F988300EF9FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02395F7A294B76E400F1A029 /* PresupuestoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresupuestoResponse.swift; sourceTree = "<group>"; };
+		02395F82294B7B4100F1A029 /* DetalleTransaccionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionBuilder.swift; sourceTree = "<group>"; };
 		023AA06C294A2FC500FF03E3 /* ListaPresupuestosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPresupuestosViewController.swift; sourceTree = "<group>"; };
 		023AA06E294A38A200FF03E3 /* AgregarPresupuestoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPresupuestoViewController.swift; sourceTree = "<group>"; };
 		023AA070294A40D700FF03E3 /* Presupuesto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presupuesto.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		029E0510294AD2FD0021E8E8 /* ListaCategoriasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriasPresenter.swift; sourceTree = "<group>"; };
 		029E0512294AD3080021E8E8 /* ListaCategoriasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriasInteractor.swift; sourceTree = "<group>"; };
 		029E0514294AD44F0021E8E8 /* ListaCategoriasBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriasBuilder.swift; sourceTree = "<group>"; };
-		A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5ADEA5C293CFCB40026E583 /* Transaccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaccion.swift; sourceTree = "<group>"; };
 		A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 		02123BF92947D3EC00B093AD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */,
 				A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */,
 			);
 			path = Home;
@@ -162,6 +163,55 @@
 				029E04E7294A84740021E8E8 /* GoogleService-Info.plist */,
 			);
 			path = "my-expenses";
+			sourceTree = "<group>";
+		};
+		02395F7C294B7B0500F1A029 /* DetalleTransaccion */ = {
+			isa = PBXGroup;
+			children = (
+				02395F81294B7B2F00F1A029 /* View */,
+				02395F80294B7B2700F1A029 /* Interactor */,
+				02395F7F294B7B1F00F1A029 /* Presenter */,
+				02395F7E294B7B1600F1A029 /* Entity */,
+				02395F7D294B7B1000F1A029 /* Router */,
+				02395F82294B7B4100F1A029 /* DetalleTransaccionBuilder.swift */,
+			);
+			path = DetalleTransaccion;
+			sourceTree = "<group>";
+		};
+		02395F7D294B7B1000F1A029 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		02395F7E294B7B1600F1A029 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		02395F7F294B7B1F00F1A029 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		02395F80294B7B2700F1A029 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		02395F81294B7B2F00F1A029 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		025621A0294B5BE600788563 /* ListaPresupuestos */ = {
@@ -249,6 +299,7 @@
 		029E04F7294A98240021E8E8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				02395F7C294B7B0500F1A029 /* DetalleTransaccion */,
 				029E04F8294A982D0021E8E8 /* ListaTransacciones */,
 				029E0506294ACFE70021E8E8 /* ListaCategorias */,
 				025621A0294B5BE600788563 /* ListaPresupuestos */,
@@ -470,12 +521,13 @@
 				A5ADEA63293D46E50026E583 /* TransaccionTableViewCell.swift in Sources */,
 				02123BA02943DC9300B093AD /* Categoria.swift in Sources */,
 				029E050F294AD2D40021E8E8 /* ListaCategoriasRouter.swift in Sources */,
+				02395F83294B7B4100F1A029 /* DetalleTransaccionBuilder.swift in Sources */,
 				023AA06F294A38A200FF03E3 /* AgregarPresupuestoViewController.swift in Sources */,
 				02395F7B294B76E400F1A029 /* PresupuestoResponse.swift in Sources */,
 				023AA071294A40D700FF03E3 /* Presupuesto.swift in Sources */,
 				029E0511294AD2FD0021E8E8 /* ListaCategoriasPresenter.swift in Sources */,
 				029E0501294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift in Sources */,
-				A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */,
+				A5A82F49293E7C6E0015B460 /* DetalleTransaccionViewController.swift in Sources */,
 				029E04FF294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift in Sources */,
 				A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */,
 				023AA06D294A2FC500FF03E3 /* ListaPresupuestosViewController.swift in Sources */,

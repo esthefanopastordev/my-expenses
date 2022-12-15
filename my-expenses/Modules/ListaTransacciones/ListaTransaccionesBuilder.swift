@@ -24,6 +24,7 @@ class ListaTransaccionesBuilder {
         
         let router = ListaTransaccionesRouter()
         router.presenter = presenter
+        router.view = view
         
         presenter.router = router
         presenter.interactor = interactor
