@@ -23,31 +23,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryTableViewCell" id="FsX-UH-ZJo" customClass="CategoriaTableViewCell" customModule="my_expenses" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="67.666664123535156"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FsX-UH-ZJo" id="rg1-qh-BYu">
-                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67.666664123535156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woc-w2-Ka5">
-                                                    <rect key="frame" x="20" y="19.666666666666668" width="37" height="29.000000000000004"/>
+                                                    <rect key="frame" x="20" y="19.333333333333325" width="37" height="29.000000000000004"/>
                                                     <imageReference key="image" image="tshirt.fill" catalog="system" symbolScale="default"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="default"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ropa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUV-RW-7QV">
-                                                    <rect key="frame" x="65" y="11.000000000000002" width="39" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65" y="11" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-mY-0tH">
-                                                    <rect key="frame" x="283.66666666666669" y="23.333333333333329" width="39" height="21"/>
+                                                    <rect key="frame" x="283.66666666666669" y="23" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-IX-E6k">
-                                                    <rect key="frame" x="65" y="40.666666666666664" width="50.666666666666657" height="16"/>
+                                                    <rect key="frame" x="65" y="40" width="50.666666666666657" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="pnd-UX-nUi"/>
                                                     </constraints>
@@ -188,13 +188,13 @@
         <!--Lista Presupuestos View Controller-->
         <scene sceneID="hht-gq-JJ7">
             <objects>
-                <viewController id="d1A-Hu-ilY" customClass="ListaPresupuestosViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListaPresupuestosViewController" id="d1A-Hu-ilY" customClass="ListaPresupuestosViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gk2-T7-bai">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-Pt-GCJ">
-                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="presupuestoCell" rowHeight="107" id="zKR-Cb-UKq">
@@ -260,11 +260,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gzh-vf-PSA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw">
-                            <connections>
-                                <segue destination="FBF-w7-erP" kind="show" identifier="agregarPresupuestoSegue" id="RXC-3n-fCb"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw"/>
                     </navigationItem>
                     <connections>
                         <outlet property="presupuestosTableView" destination="6Hi-Pt-GCJ" id="HgW-fH-nc3"/>
@@ -1016,9 +1012,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="d1A-Hu-ilY" kind="relationship" relationship="rootViewController" id="fG0-pk-DYv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fA-gJ-c7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

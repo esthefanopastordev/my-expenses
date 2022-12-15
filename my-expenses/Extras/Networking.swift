@@ -12,6 +12,8 @@ protocol RemoteRepository {
     func fetchTransacciones() async throws -> [TransaccionResponse]
     
     func fetchCategorias() async throws -> [CategoriaResponse]
+    
+    func fetchPresupuestos() async throws -> [PresupuestoResponse]
 }
 
 class FirebaseAPI: RemoteRepository {
@@ -27,5 +29,11 @@ class FirebaseAPI: RemoteRepository {
         let docRef = db.collection("categoria")
         let querySnapshot = try await docRef.getDocuments()
         return querySnapshot.documents.compactMap { document in try? document.data(as: CategoriaResponse.self) }
+    }
+    
+    func fetchPresupuestos() async throws -> [PresupuestoResponse] {
+        let docRef = db.collection("presupuesto")
+        let querySnapshot = try await docRef.getDocuments()
+        return querySnapshot.documents.compactMap { document in try? document.data(as: PresupuestoResponse.self) }
     }
 }
