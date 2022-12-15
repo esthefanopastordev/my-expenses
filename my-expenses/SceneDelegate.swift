@@ -17,8 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let tabBarController = UITabBarController()
+        
         let homeViewController = ListaTransaccionesBuilder.build()
-        tabBarController.setViewControllers([homeViewController], animated: true)
+        let categoriesViewController = ListaCategoriasBuilder.build()
+        
+        tabBarController.setViewControllers([
+            homeViewController,
+            categoriesViewController
+        ], animated: true)
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()

@@ -10,50 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categorias View Controller-->
+        <!--Lista Categorias View Controller-->
         <scene sceneID="uhd-6y-Mpe">
             <objects>
-                <viewController id="fm8-BD-8Ez" customClass="CategoriasViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListaCategoriasViewController" id="fm8-BD-8Ez" customClass="ListaCategoriasViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="086-GR-aRU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLq-IU-OSF">
-                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryTableViewCell" rowHeight="67" id="FsX-UH-ZJo" customClass="CategoriaTableViewCell" customModule="my_expenses" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="67"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryTableViewCell" id="FsX-UH-ZJo" customClass="CategoriaTableViewCell" customModule="my_expenses" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="67.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FsX-UH-ZJo" id="rg1-qh-BYu">
-                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67.666664123535156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woc-w2-Ka5">
-                                                    <rect key="frame" x="20" y="19.333333333333325" width="37" height="29.000000000000004"/>
+                                                    <rect key="frame" x="20" y="19.666666666666668" width="37" height="29.000000000000004"/>
                                                     <imageReference key="image" image="tshirt.fill" catalog="system" symbolScale="default"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="default"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ropa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUV-RW-7QV">
-                                                    <rect key="frame" x="65" y="11" width="39" height="21"/>
+                                                    <rect key="frame" x="65" y="11.000000000000002" width="39" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-mY-0tH">
-                                                    <rect key="frame" x="283.66666666666669" y="23" width="39" height="21"/>
+                                                    <rect key="frame" x="283.66666666666669" y="23.333333333333329" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-IX-E6k">
-                                                    <rect key="frame" x="65" y="40" width="45" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                    <rect key="frame" x="65" y="40.666666666666664" width="50.666666666666657" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="pnd-UX-nUi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Rnz-IX-E6k" firstAttribute="bottom" secondItem="rg1-qh-BYu" secondAttribute="bottomMargin" id="11n-Nw-7TC"/>
                                                 <constraint firstItem="jUV-RW-7QV" firstAttribute="leading" secondItem="woc-w2-Ka5" secondAttribute="trailing" constant="8" id="4z7-mI-dzr"/>
                                                 <constraint firstItem="woc-w2-Ka5" firstAttribute="leading" secondItem="rg1-qh-BYu" secondAttribute="leadingMargin" id="BdN-gR-4we"/>
                                                 <constraint firstItem="woc-w2-Ka5" firstAttribute="centerY" secondItem="rg1-qh-BYu" secondAttribute="centerY" id="Mal-vB-Hnz"/>
@@ -69,7 +73,6 @@
                                             <outlet property="montoTotalLabel" destination="Omx-mY-0tH" id="Tul-Ia-zpM"/>
                                             <outlet property="nombreLabel" destination="jUV-RW-7QV" id="eeu-VY-obg"/>
                                             <outlet property="numeroDeItemsLabel" destination="Rnz-IX-E6k" id="OrC-Qz-8h0"/>
-                                            <segue destination="4qK-9a-SdK" kind="show" identifier="DetalleCategoriaSegue" id="tPB-tF-xXU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,11 +88,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CmY-sf-g9U">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bjQ-t7-MbJ">
-                            <connections>
-                                <segue destination="f9L-fZ-Pom" kind="show" identifier="agregarCategoriaSegue" id="NOM-QY-EKx"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bjQ-t7-MbJ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="categoriasTableView" destination="ZLq-IU-OSF" id="ZKK-Hl-x49"/>
@@ -887,9 +886,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fm8-BD-8Ez" kind="relationship" relationship="rootViewController" id="ah1-bw-D1a"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPh-ou-w8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1071,9 +1067,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

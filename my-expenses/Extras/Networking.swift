@@ -10,14 +10,22 @@ import FirebaseFirestore
 
 protocol RemoteRepository {
     func fetchTransacciones() async throws -> [TransaccionResponse]
+    
+    func fetchCategorias() async throws -> [CategoriaResponse]
 }
 
-class TransaccionesFirebase: RemoteRepository {
+class FirebaseAPI: RemoteRepository {
     let db = Firestore.firestore()
     
     func fetchTransacciones() async throws -> [TransaccionResponse] {
         let docRef = db.collection("transaccion")
         let querySnapshot = try await docRef.getDocuments()
         return querySnapshot.documents.compactMap { document in try? document.data(as: TransaccionResponse.self) }
+    }
+    
+    func fetchCategorias() async throws -> [CategoriaResponse] {
+        let docRef = db.collection("categoria")
+        let querySnapshot = try await docRef.getDocuments()
+        return querySnapshot.documents.compactMap { document in try? document.data(as: CategoriaResponse.self) }
     }
 }
