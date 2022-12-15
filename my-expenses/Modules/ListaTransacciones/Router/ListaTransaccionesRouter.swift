@@ -18,6 +18,7 @@ class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     var view: UIViewController?
     
     var detalleTransaccionBuilder: DetalleTransaccionBuilder?
+    var formTransaccionBuilder: FormTransaccionBuilder?
     
     func mostrar(_ transaccion: TransaccionResponse) {
         detalleTransaccionBuilder = DetalleTransaccionBuilder()
@@ -28,13 +29,23 @@ class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     }
     
     func mostrarForm() {
-        let vc = FormTransaccionBuilder.build()
-        view?.show(vc, sender: nil)
+        formTransaccionBuilder = FormTransaccionBuilder()
+        formTransaccionBuilder?.delegate = self
+        
+        let formTransaccionViewController = formTransaccionBuilder!.build()
+        view?.show(formTransaccionViewController, sender: nil)
     }
 }
 
 extension ListaTransaccionesRouter: DetalleTransaccionBuilderDelegate {
     func detalleTransaccionBuilder(didDelete viewController: UIViewController) {
+        presenter?.recargar()
+    }
+}
+
+extension ListaTransaccionesRouter: FormTransaccionBuilderDelegate {
+    func formTransaccionBuilder(didCreate viewController: UIViewController) {
+        print("Me cree asies")
         presenter?.recargar()
     }
 }

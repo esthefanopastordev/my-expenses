@@ -14,6 +14,8 @@ protocol FormTransaccionViewProtocol {
 class FormTransaccionViewController: UIViewController {
     private var tipoTransaccion: String = Tipo.gasto.rawValue
     
+    var presenter: FormTransaccionPresenterProtocol?
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -31,7 +33,7 @@ class FormTransaccionViewController: UIViewController {
     }
     
     @IBAction func didDoneTap(_ sender: UIBarButtonItem) {
-        
+        presenter?.didDoneTap()
     }
 }
 
