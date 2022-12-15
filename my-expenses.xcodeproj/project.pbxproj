@@ -26,11 +26,15 @@
 		029E04F1294A8EE10021E8E8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E04F0294A8EE10021E8E8 /* Networking.swift */; };
 		029E04F4294A95F00021E8E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 029E04F3294A95F00021E8E8 /* FirebaseFirestore */; };
 		029E04F6294A95F00021E8E8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 029E04F5294A95F00021E8E8 /* FirebaseFirestoreSwift */; };
+		029E04FF294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E04FE294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift */; };
+		029E0501294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0500294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift */; };
+		029E0503294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0502294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift */; };
+		029E0505294A9A580021E8E8 /* ListaTransaccionesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E0504294A9A580021E8E8 /* ListaTransaccionesRouter.swift */; };
 		A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */; };
 		A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */; };
 		A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* Transaccion.swift */; };
-		A5ADEA5F293D00110026E583 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5E293D00110026E583 /* HomeViewController.swift */; };
-		A5ADEA63293D46E50026E583 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */; };
+		A5ADEA5F293D00110026E583 /* ListaTransaccionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */; };
+		A5ADEA63293D46E50026E583 /* TransaccionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA62293D46E50026E583 /* TransaccionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +57,15 @@
 		029E04E7294A84740021E8E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		029E04ED294A8E880021E8E8 /* TransaccionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionResponse.swift; sourceTree = "<group>"; };
 		029E04F0294A8EE10021E8E8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		029E04FE294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesBuilder.swift; sourceTree = "<group>"; };
+		029E0500294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesInteractor.swift; sourceTree = "<group>"; };
+		029E0502294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesPresenter.swift; sourceTree = "<group>"; };
+		029E0504294A9A580021E8E8 /* ListaTransaccionesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesRouter.swift; sourceTree = "<group>"; };
 		A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
 		A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5ADEA5C293CFCB40026E583 /* Transaccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaccion.swift; sourceTree = "<group>"; };
-		A5ADEA5E293D00110026E583 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesViewController.swift; sourceTree = "<group>"; };
+		A5ADEA62293D46E50026E583 /* TransaccionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +84,6 @@
 		02123BF92947D3EC00B093AD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A5ADEA5E293D00110026E583 /* HomeViewController.swift */,
-				A5ADEA62293D46E50026E583 /* TransactionTableViewCell.swift */,
 				A5A82F48293E7C6E0015B460 /* TransactionDetailsViewController.swift */,
 				A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */,
 			);
@@ -123,8 +129,9 @@
 		021BA9BF292F987F00EF9FA3 /* my-expenses */ = {
 			isa = PBXGroup;
 			children = (
-				029E04EF294A8ED60021E8E8 /* Extras */,
 				029E04EC294A8E770021E8E8 /* Resources */,
+				029E04EF294A8ED60021E8E8 /* Extras */,
+				029E04F7294A98240021E8E8 /* Modules */,
 				02123BF92947D3EC00B093AD /* Home */,
 				02123BFA2947D3F800B093AD /* Categorias */,
 				02123BFB2947D40A00B093AD /* Presupuestos */,
@@ -156,10 +163,71 @@
 			path = Extras;
 			sourceTree = "<group>";
 		};
-		A5A82F4C293E9F840015B460 /* models */ = {
+		029E04F7294A98240021E8E8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				029E04F8294A982D0021E8E8 /* ListaTransacciones */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		029E04F8294A982D0021E8E8 /* ListaTransacciones */ = {
+			isa = PBXGroup;
+			children = (
+				029E04F9294A983B0021E8E8 /* View */,
+				029E04FA294A98410021E8E8 /* Interactor */,
+				029E04FB294A984F0021E8E8 /* Presenter */,
+				029E04FC294A98800021E8E8 /* Entity */,
+				029E04FD294A98920021E8E8 /* Router */,
+				029E04FE294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift */,
+			);
+			path = ListaTransacciones;
+			sourceTree = "<group>";
+		};
+		029E04F9294A983B0021E8E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		029E04FA294A98410021E8E8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				029E0500294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift */,
+				A5ADEA62293D46E50026E583 /* TransaccionTableViewCell.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		029E04FB294A984F0021E8E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				029E0502294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		029E04FC294A98800021E8E8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				A5ADEA5C293CFCB40026E583 /* Transaccion.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		029E04FD294A98920021E8E8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				029E0504294A9A580021E8E8 /* ListaTransaccionesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5A82F4C293E9F840015B460 /* models */ = {
+			isa = PBXGroup;
+			children = (
 				02123B9F2943DC9300B093AD /* Categoria.swift */,
 				02123BA12943DCA400B093AD /* Tipo.swift */,
 				023AA070294A40D700FF03E3 /* Presupuesto.swift */,
@@ -256,14 +324,18 @@
 				A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */,
 				029E04EE294A8E880021E8E8 /* TransaccionResponse.swift in Sources */,
 				02123BA42943E40200B093AD /* CategoriaTableViewCell.swift in Sources */,
-				A5ADEA63293D46E50026E583 /* TransactionTableViewCell.swift in Sources */,
+				029E0505294A9A580021E8E8 /* ListaTransaccionesRouter.swift in Sources */,
+				A5ADEA63293D46E50026E583 /* TransaccionTableViewCell.swift in Sources */,
 				02123BA02943DC9300B093AD /* Categoria.swift in Sources */,
 				023AA06F294A38A200FF03E3 /* AgregarPresupuestoViewController.swift in Sources */,
 				023AA071294A40D700FF03E3 /* Presupuesto.swift in Sources */,
+				029E0501294A99FF0021E8E8 /* ListaTransaccionesInteractor.swift in Sources */,
 				A5A82F49293E7C6E0015B460 /* TransactionDetailsViewController.swift in Sources */,
+				029E04FF294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift in Sources */,
 				A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */,
 				023AA06D294A2FC500FF03E3 /* ListaPresupuestosViewController.swift in Sources */,
-				A5ADEA5F293D00110026E583 /* HomeViewController.swift in Sources */,
+				A5ADEA5F293D00110026E583 /* ListaTransaccionesViewController.swift in Sources */,
+				029E0503294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

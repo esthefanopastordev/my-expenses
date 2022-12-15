@@ -8,7 +8,7 @@
 import Foundation
 
 enum Tipo: String, CaseIterable {
-    case gasto
-    case ingreso
+    case gasto = "Gasto"
+    case ingreso = "Ingreso"
 }
 
