@@ -11,6 +11,7 @@ protocol ListaTransaccionesPresenterProtocol {
     func viewWillApper()
     func listar(_ transacciones: [TransaccionResponse])
     func presentarDetalle(_ transaccion: TransaccionResponse)
+    func presentarForm()
 }
 
 class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
@@ -28,5 +29,9 @@ class ListaTransaccionesPresenter: ListaTransaccionesPresenterProtocol {
     
     func presentarDetalle(_ transaccion: TransaccionResponse) {
         router?.mostrar(transaccion)
+    }
+    
+    func presentarForm() {
+        router?.mostrarForm()
     }
 }

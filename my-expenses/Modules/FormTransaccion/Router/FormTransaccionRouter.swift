@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol FormTransaccionRouterProtocol {
+    
+}
+
+class FormTransaccionRouter: FormTransaccionRouterProtocol {
+    
+}

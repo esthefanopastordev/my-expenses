@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol FormTransaccionInteractorProtocol {
+    
+}
+
+class FormTransaccionInteractor: FormTransaccionInteractorProtocol {
+    
+}

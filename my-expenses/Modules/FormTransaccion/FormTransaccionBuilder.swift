@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+class FormTransaccionBuilder {
+    static func build() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "FormTransaccionViewController") as! FormTransaccionViewController
+        
+        return view
+    }
+}

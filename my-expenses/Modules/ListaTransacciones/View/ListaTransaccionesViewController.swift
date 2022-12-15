@@ -21,18 +21,22 @@ class ListaTransaccionesViewController: UIViewController {
     @IBOutlet weak var ingresosTotalesLabel: UILabel!
     @IBOutlet weak var gastosTotales: UILabel!
     @IBOutlet weak var transactionsTableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        transactionsTableView.dataSource = self
-        transactionsTableView.delegate = self
-    }
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     override func viewWillAppear(_ animated: Bool) {
         presenter?.viewWillApper()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        transactionsTableView.dataSource = self
+        transactionsTableView.delegate = self
+        
+        navigationBar.shadowImage = UIImage() // Remove default navigation bar shadow
+    }
+    
     @IBAction func didAddTap(_ sender: UIBarButtonItem) {
+        presenter?.presentarForm()
     }
 }
 

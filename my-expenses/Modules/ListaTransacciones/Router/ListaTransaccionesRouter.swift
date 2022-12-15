@@ -10,6 +10,7 @@ import UIKit
 
 protocol ListaTransaccionesRouterProtocol {
     func mostrar(_ transaccion: TransaccionResponse)
+    func mostrarForm()
 }
 
 class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
@@ -18,6 +19,11 @@ class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     
     func mostrar(_ transaccion: TransaccionResponse) {
         let vc = DetalleTransaccionBuilder.build(transaccion)
+        view?.show(vc, sender: nil)
+    }
+    
+    func mostrarForm() {
+        let vc = FormTransaccionBuilder.build()
         view?.show(vc, sender: nil)
     }
 }
