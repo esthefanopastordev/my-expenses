@@ -54,6 +54,7 @@ extension ListaPresupuestosViewController: UITableViewDataSource {
 
 extension ListaPresupuestosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.presentar()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

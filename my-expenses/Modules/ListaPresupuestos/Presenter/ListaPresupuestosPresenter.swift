@@ -10,6 +10,7 @@ import Foundation
 protocol ListaPresupuestosPresenterProtocol {
     func viewWillAppear()
     func listar(_ presupuestos: [PresupuestoResponse])
+    func presentar()
     func presentarForm()
 }
 
@@ -26,6 +27,11 @@ extension ListaPresupuestosPresenter: ListaPresupuestosPresenterProtocol {
     
     func listar(_ presupuestos: [PresupuestoResponse]) {
         view?.listar(presupuestos)
+    }
+    
+    func presentar() {
+        let presupuesto = Presupuesto(id: "", monto: "", categoria: "")
+        router?.mostrarDetalle(presupuesto)
     }
     
     func presentarForm() {

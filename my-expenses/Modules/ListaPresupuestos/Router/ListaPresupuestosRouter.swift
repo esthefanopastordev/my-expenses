@@ -8,17 +8,25 @@
 import UIKit
 
 protocol ListaPresupuestosRouterProtocol {
+    func mostrarDetalle(_ presupuesto: Presupuesto)
     func mostrarForm()
 }
 
 class ListaPresupuestosRouter {
     var view: UIViewController?
     
+    private var detallePresupuestoBuilder: DetallePresupuestoBuilder?
     private var formPresupuestoBuilder: FormPresupuestoBuilder?
-    
 }
 
 extension ListaPresupuestosRouter: ListaPresupuestosRouterProtocol {
+    func mostrarDetalle(_ presupuesto: Presupuesto) {
+        detallePresupuestoBuilder = DetallePresupuestoBuilder()
+        
+        let detallePresupuestoViewController = detallePresupuestoBuilder!.build()
+        view?.present(detallePresupuestoViewController, animated: true)
+    }
+    
     func mostrarForm() {
         formPresupuestoBuilder = FormPresupuestoBuilder()
         
