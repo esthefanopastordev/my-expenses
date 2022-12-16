@@ -75,6 +75,11 @@ extension ListaCategoriasViewController: UITableViewDataSource {
 
 extension ListaCategoriasViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        let sectionName = Tipo.allCases[section].rawValue
+        let row = indexPath.row
+        let categoria = categorisUpdate[sectionName]![row]
+        presenter?.presentarDetalle(categoria)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

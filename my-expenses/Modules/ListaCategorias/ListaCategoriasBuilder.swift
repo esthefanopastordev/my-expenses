@@ -23,6 +23,7 @@ class ListaCategoriasBuilder {
         
         let router = ListaCategoriasRouter()
         router.presenter = presenter
+        router.view = view
         
         presenter.router = router
         presenter.interactor = interactor
