@@ -12,14 +12,18 @@ protocol ListaCategoriasViewProtocol {
 }
 
 class ListaCategoriasViewController: UIViewController {
-    
     private var categorias: [CategoriaResponse] = []
     // TODO: buscar forma de implementar esto
     private var categorisUpdate: [String: [CategoriaResponse]] = [:]
     
+    var presenter: ListaCategoriasPresenterProtocol?
+    
     @IBOutlet weak var categoriasTableView: UITableView?
     
-    var presenter: ListaCategoriasPresenterProtocol?
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        presenter?.viewWillAppear()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +32,8 @@ class ListaCategoriasViewController: UIViewController {
         categoriasTableView?.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        presenter?.viewWillAppear()
+    @IBAction func didAddTap(_ sender: UIBarButtonItem) {
+        presenter?.presenterForm()
     }
 }
 

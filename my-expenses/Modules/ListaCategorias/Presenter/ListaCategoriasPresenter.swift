@@ -11,6 +11,7 @@ protocol ListaCategoriasPresenterProtocol {
     func viewWillAppear()
     func listar(_ categorias: [CategoriaResponse])
     func presentarDetalle(_ categoria: CategoriaResponse)
+    func presenterForm()
 }
 
 class ListaCategoriasPresenter {
@@ -30,5 +31,9 @@ extension ListaCategoriasPresenter: ListaCategoriasPresenterProtocol {
     
     func presentarDetalle(_ categoria: CategoriaResponse) {
         router?.mostrar(categoria)
+    }
+    
+    func presenterForm() {
+        router?.mostrarForm()
     }
 }
