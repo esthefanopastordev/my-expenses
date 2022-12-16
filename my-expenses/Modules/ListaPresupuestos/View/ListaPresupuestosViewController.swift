@@ -15,8 +15,13 @@ class ListaPresupuestosViewController: UIViewController {
     private var presupuestos: [PresupuestoResponse] = []
     
     @IBOutlet weak var presupuestosTableView: UITableView!
-
+    
     var presenter: ListaPresupuestosPresenterProtocol?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        presenter?.viewWillAppear()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +29,8 @@ class ListaPresupuestosViewController: UIViewController {
         presupuestosTableView.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        presenter?.viewWillAppear()
+    @IBAction func didAddTap(_ sender: UIBarButtonItem) {
+        presenter?.presentarForm()
     }
 }
 

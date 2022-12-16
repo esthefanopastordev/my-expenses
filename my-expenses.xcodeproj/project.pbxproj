@@ -20,7 +20,6 @@
 		02395F7B294B76E400F1A029 /* PresupuestoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02395F7A294B76E400F1A029 /* PresupuestoResponse.swift */; };
 		02395F83294B7B4100F1A029 /* DetalleTransaccionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02395F82294B7B4100F1A029 /* DetalleTransaccionBuilder.swift */; };
 		023AA06D294A2FC500FF03E3 /* ListaPresupuestosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA06C294A2FC500FF03E3 /* ListaPresupuestosViewController.swift */; };
-		023AA06F294A38A200FF03E3 /* AgregarPresupuestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA06E294A38A200FF03E3 /* AgregarPresupuestoViewController.swift */; };
 		023AA071294A40D700FF03E3 /* Presupuesto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA070294A40D700FF03E3 /* Presupuesto.swift */; };
 		025621A9294B5C5600788563 /* ListaPresupuestosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025621A8294B5C5600788563 /* ListaPresupuestosInteractor.swift */; };
 		025621AB294B5C7400788563 /* ListaPresupuestosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025621AA294B5C7400788563 /* ListaPresupuestosPresenter.swift */; };
@@ -57,6 +56,11 @@
 		02E79440294CE0A5006F60EA /* FormCategoriaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7943F294CE0A5006F60EA /* FormCategoriaPresenter.swift */; };
 		02E79442294CE0AE006F60EA /* FormCategoriaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79441294CE0AE006F60EA /* FormCategoriaRouter.swift */; };
 		02E79444294CE0B6006F60EA /* FormCategoriaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79443294CE0B6006F60EA /* FormCategoriaBuilder.swift */; };
+		02E7944D294CEB35006F60EA /* FormPresupuestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7944C294CEB35006F60EA /* FormPresupuestoViewController.swift */; };
+		02E7944F294CEB74006F60EA /* FormPresupuestoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7944E294CEB74006F60EA /* FormPresupuestoInteractor.swift */; };
+		02E79451294CEBB0006F60EA /* FormPresupuestoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79450294CEBB0006F60EA /* FormPresupuestoPresenter.swift */; };
+		02E79453294CEBD9006F60EA /* FormPresupuestoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79452294CEBD9006F60EA /* FormPresupuestoRouter.swift */; };
+		02E79455294CEBFB006F60EA /* FormPresupuestoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79454294CEBFB006F60EA /* FormPresupuestoBuilder.swift */; };
 		A5A82F49293E7C6E0015B460 /* DetalleTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */; };
 		A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */; };
 		A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* Transaccion.swift */; };
@@ -80,7 +84,6 @@
 		02395F7A294B76E400F1A029 /* PresupuestoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresupuestoResponse.swift; sourceTree = "<group>"; };
 		02395F82294B7B4100F1A029 /* DetalleTransaccionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionBuilder.swift; sourceTree = "<group>"; };
 		023AA06C294A2FC500FF03E3 /* ListaPresupuestosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPresupuestosViewController.swift; sourceTree = "<group>"; };
-		023AA06E294A38A200FF03E3 /* AgregarPresupuestoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPresupuestoViewController.swift; sourceTree = "<group>"; };
 		023AA070294A40D700FF03E3 /* Presupuesto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presupuesto.swift; sourceTree = "<group>"; };
 		025621A8294B5C5600788563 /* ListaPresupuestosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPresupuestosInteractor.swift; sourceTree = "<group>"; };
 		025621AA294B5C7400788563 /* ListaPresupuestosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPresupuestosPresenter.swift; sourceTree = "<group>"; };
@@ -115,6 +118,11 @@
 		02E7943F294CE0A5006F60EA /* FormCategoriaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCategoriaPresenter.swift; sourceTree = "<group>"; };
 		02E79441294CE0AE006F60EA /* FormCategoriaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCategoriaRouter.swift; sourceTree = "<group>"; };
 		02E79443294CE0B6006F60EA /* FormCategoriaBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCategoriaBuilder.swift; sourceTree = "<group>"; };
+		02E7944C294CEB35006F60EA /* FormPresupuestoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresupuestoViewController.swift; sourceTree = "<group>"; };
+		02E7944E294CEB74006F60EA /* FormPresupuestoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresupuestoInteractor.swift; sourceTree = "<group>"; };
+		02E79450294CEBB0006F60EA /* FormPresupuestoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresupuestoPresenter.swift; sourceTree = "<group>"; };
+		02E79452294CEBD9006F60EA /* FormPresupuestoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresupuestoRouter.swift; sourceTree = "<group>"; };
+		02E79454294CEBFB006F60EA /* FormPresupuestoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresupuestoBuilder.swift; sourceTree = "<group>"; };
 		A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5ADEA5C293CFCB40026E583 /* Transaccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaccion.swift; sourceTree = "<group>"; };
@@ -135,14 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02123BFB2947D40A00B093AD /* Presupuestos */ = {
-			isa = PBXGroup;
-			children = (
-				023AA06E294A38A200FF03E3 /* AgregarPresupuestoViewController.swift */,
-			);
-			path = Presupuestos;
-			sourceTree = "<group>";
-		};
 		021BA9B4292F987F00EF9FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +162,6 @@
 		021BA9BF292F987F00EF9FA3 /* my-expenses */ = {
 			isa = PBXGroup;
 			children = (
-				025621B2294B6AA200788563 /* Old */,
 				029E04EC294A8E770021E8E8 /* Resources */,
 				029E04EF294A8ED60021E8E8 /* Extras */,
 				029E04F7294A98240021E8E8 /* Modules */,
@@ -283,15 +282,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		025621B2294B6AA200788563 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				02123BFB2947D40A00B093AD /* Presupuestos */,
-				A5A82F4C293E9F840015B460 /* models */,
-			);
-			path = Old;
-			sourceTree = "<group>";
-		};
 		0289AB7D294B88570064E0D0 /* FormTransaccion */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +337,7 @@
 		029E04EC294A8E770021E8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02123BA12943DCA400B093AD /* Tipo.swift */,
 				029E04ED294A8E880021E8E8 /* TransaccionResponse.swift */,
 				029E050C294AD1710021E8E8 /* CategoriaResponse.swift */,
 				02395F7A294B76E400F1A029 /* PresupuestoResponse.swift */,
@@ -372,6 +363,7 @@
 				02E79429294CD0A4006F60EA /* DetalleCategoria */,
 				02E79437294CDFE3006F60EA /* FormCategoria */,
 				025621A0294B5BE600788563 /* ListaPresupuestos */,
+				02E79445294CEAC2006F60EA /* FormPresupuesto */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -588,12 +580,56 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A5A82F4C293E9F840015B460 /* models */ = {
+		02E79445294CEAC2006F60EA /* FormPresupuesto */ = {
 			isa = PBXGroup;
 			children = (
-				02123BA12943DCA400B093AD /* Tipo.swift */,
+				02E7944B294CEB25006F60EA /* View */,
+				02E7944A294CEB1E006F60EA /* Interactor */,
+				02E79449294CEB10006F60EA /* Presenter */,
+				02E79448294CEB08006F60EA /* Entity */,
+				02E79447294CEB03006F60EA /* Router */,
+				02E79454294CEBFB006F60EA /* FormPresupuestoBuilder.swift */,
 			);
-			path = models;
+			path = FormPresupuesto;
+			sourceTree = "<group>";
+		};
+		02E79447294CEB03006F60EA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				02E79452294CEBD9006F60EA /* FormPresupuestoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		02E79448294CEB08006F60EA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		02E79449294CEB10006F60EA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				02E79450294CEBB0006F60EA /* FormPresupuestoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		02E7944A294CEB1E006F60EA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				02E7944E294CEB74006F60EA /* FormPresupuestoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		02E7944B294CEB25006F60EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02E7944C294CEB35006F60EA /* FormPresupuestoViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +714,7 @@
 				029E050D294AD1710021E8E8 /* CategoriaResponse.swift in Sources */,
 				0289AB88294B88EF0064E0D0 /* FormTransaccionPresenter.swift in Sources */,
 				021BA9C1292F987F00EF9FA3 /* AppDelegate.swift in Sources */,
+				02E79455294CEBFB006F60EA /* FormPresupuestoBuilder.swift in Sources */,
 				029E0513294AD3080021E8E8 /* ListaCategoriasInteractor.swift in Sources */,
 				025AFBBC2948AC250065304E /* FormCategoriaViewController.swift in Sources */,
 				025621A9294B5C5600788563 /* ListaPresupuestosInteractor.swift in Sources */,
@@ -685,6 +722,7 @@
 				025621B1294B5D0900788563 /* AppBuilder.swift in Sources */,
 				029E04F1294A8EE10021E8E8 /* Networking.swift in Sources */,
 				02E79432294CD1DB006F60EA /* DetalleCategoriaPresenter.swift in Sources */,
+				02E7944D294CEB35006F60EA /* FormPresupuestoViewController.swift in Sources */,
 				021BA9C3292F987F00EF9FA3 /* SceneDelegate.swift in Sources */,
 				0289AB8C294B9B230064E0D0 /* DetalleTransaccionPresenter.swift in Sources */,
 				02123B9E2943DB0900B093AD /* ListaCategoriasViewController.swift in Sources */,
@@ -703,10 +741,10 @@
 				029E0505294A9A580021E8E8 /* ListaTransaccionesRouter.swift in Sources */,
 				025621AB294B5C7400788563 /* ListaPresupuestosPresenter.swift in Sources */,
 				A5ADEA63293D46E50026E583 /* TransaccionTableViewCell.swift in Sources */,
+				02E7944F294CEB74006F60EA /* FormPresupuestoInteractor.swift in Sources */,
 				02123BA02943DC9300B093AD /* Categoria.swift in Sources */,
 				029E050F294AD2D40021E8E8 /* ListaCategoriasRouter.swift in Sources */,
 				02395F83294B7B4100F1A029 /* DetalleTransaccionBuilder.swift in Sources */,
-				023AA06F294A38A200FF03E3 /* AgregarPresupuestoViewController.swift in Sources */,
 				02395F7B294B76E400F1A029 /* PresupuestoResponse.swift in Sources */,
 				023AA071294A40D700FF03E3 /* Presupuesto.swift in Sources */,
 				029E0511294AD2FD0021E8E8 /* ListaCategoriasPresenter.swift in Sources */,
@@ -719,8 +757,10 @@
 				023AA06D294A2FC500FF03E3 /* ListaPresupuestosViewController.swift in Sources */,
 				025621AD294B5C9000788563 /* ListaPresupuestosRouter.swift in Sources */,
 				029E0515294AD44F0021E8E8 /* ListaCategoriasBuilder.swift in Sources */,
+				02E79453294CEBD9006F60EA /* FormPresupuestoRouter.swift in Sources */,
 				02E79444294CE0B6006F60EA /* FormCategoriaBuilder.swift in Sources */,
 				A5ADEA5F293D00110026E583 /* ListaTransaccionesViewController.swift in Sources */,
+				02E79451294CEBB0006F60EA /* FormPresupuestoPresenter.swift in Sources */,
 				029E0503294A9A2E0021E8E8 /* ListaTransaccionesPresenter.swift in Sources */,
 				02E7943E294CE09D006F60EA /* FormCategoriaInteractor.swift in Sources */,
 				025621AF294B5CB200788563 /* ListaPresupuestosBuilder.swift in Sources */,

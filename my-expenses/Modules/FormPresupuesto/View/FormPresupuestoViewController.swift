@@ -1,20 +1,20 @@
 //
-//  AgregarPresupuestoViewController.swift
+//  FormPresupuestoViewController.swift
 //  my-expenses
 //
-//  Created by Esthefano Oniel Pastor Palacios on 14/12/22.
+//  Created by Esthefano Oniel Pastor Palacios on 16/12/22.
 //
 
 import UIKit
 
-protocol AgregarPresupuestoViewControllerDelegate {
-    func agregarPresupuestoView(_ viewController: AgregarPresupuestoViewController, didCreatePresupuesto presupuesto: Presupuesto)
+protocol FormPresupuestoViewProtocol {
+    
 }
 
-class AgregarPresupuestoViewController: UIViewController {
-    
+class FormPresupuestoViewController: UIViewController {
     @IBOutlet weak var montoTextField: UITextField!
     @IBOutlet weak var categoriaButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     var idCategoriaSeleccionada: String?
     
@@ -25,14 +25,8 @@ class AgregarPresupuestoViewController: UIViewController {
     
     var presupuesto: Presupuesto?
     
-    var delegate: AgregarPresupuestoViewControllerDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Agregar presupuesto"
         setUpCategoriaPopUpButton()
     }
     
@@ -48,12 +42,14 @@ class AgregarPresupuestoViewController: UIViewController {
     }
     
     @IBAction func didDoneTap(_ sender: UIBarButtonItem) {
-        let presupuesto = Presupuesto(id: "nuevoId", monto: "1000", categoria: "tranporte")
-        delegate?.agregarPresupuestoView(self, didCreatePresupuesto: presupuesto)
-        dismiss(animated: true)
+        
     }
     
     @IBAction func didCancelTap(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
+        
     }
+}
+
+extension FormPresupuestoViewController: FormPresupuestoViewProtocol {
+    
 }

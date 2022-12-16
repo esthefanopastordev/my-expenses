@@ -35,31 +35,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryTableViewCell" id="FsX-UH-ZJo" customClass="CategoriaTableViewCell" customModule="my_expenses" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="67.666664123535156"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FsX-UH-ZJo" id="rg1-qh-BYu">
-                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67.666664123535156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woc-w2-Ka5">
-                                                    <rect key="frame" x="20" y="19.666666666666668" width="37" height="29.000000000000004"/>
+                                                    <rect key="frame" x="20" y="19.333333333333325" width="37" height="29.000000000000004"/>
                                                     <imageReference key="image" image="tshirt.fill" catalog="system" symbolScale="default"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="default"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ropa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUV-RW-7QV">
-                                                    <rect key="frame" x="65" y="11.000000000000002" width="39" height="21.666666666666671"/>
+                                                    <rect key="frame" x="65" y="11" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-mY-0tH">
-                                                    <rect key="frame" x="283.66666666666669" y="23.333333333333329" width="39" height="21"/>
+                                                    <rect key="frame" x="283.66666666666669" y="23" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-IX-E6k">
-                                                    <rect key="frame" x="65" y="40.666666666666664" width="50.666666666666657" height="16"/>
+                                                    <rect key="frame" x="65" y="40" width="50.666666666666657" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="pnd-UX-nUi"/>
                                                     </constraints>
@@ -121,7 +121,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6T-NR-S3d">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <items>
-                                    <navigationItem id="Yid-29-kiZ">
+                                    <navigationItem title="Agregar categoría" id="Yid-29-kiZ">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zUf-KY-GL3">
                                             <connections>
                                                 <action selector="didCancelTap:" destination="mta-eI-XZy" id="FyN-DY-W5u"/>
@@ -216,11 +216,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-Ws-Tsc">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-Ws-Tsc">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem id="Gzh-vf-PSA">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fSO-Tb-4cw">
+                                            <connections>
+                                                <action selector="didAddTap:" destination="d1A-Hu-ilY" id="BfS-Aj-Rzz"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -301,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="766" y="4137"/>
         </scene>
-        <!--Agregar Presupuesto View Controller-->
+        <!--Form Presupuesto View Controller-->
         <scene sceneID="EVp-vu-hQY">
             <objects>
-                <viewController id="jjN-iq-sdr" customClass="AgregarPresupuestoViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormPresupuestoViewController" id="jjN-iq-sdr" customClass="FormPresupuestoViewController" customModule="my_expenses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ir3-Ru-Pgn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,7 +316,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sie-WV-p1v">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <items>
-                                    <navigationItem id="KAG-zX-rpz">
+                                    <navigationItem title="Agregar presupuesto" id="KAG-zX-rpz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P4p-Fk-HeJ">
                                             <connections>
                                                 <action selector="didCancelTap:" destination="jjN-iq-sdr" id="wcN-NP-aUG"/>
@@ -382,6 +386,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqe-uQ-vm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1618" y="4137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2tr-pd-ab2">
+            <objects>
+                <viewController id="Xm0-Vt-sf4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T86-a7-2iW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTO-4B-Uao">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                <items>
+                                    <navigationItem title="Detalle presupuesto" id="Fpx-Px-Zxn">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="01f-Pk-KPZ"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="noE-97-cE8"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VU-dR-X9D">
+                                <rect key="frame" x="16" y="59" width="67" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IS-iR-mBm">
+                                <rect key="frame" x="48" y="85" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGV-PZ-Eqv">
+                                <rect key="frame" x="16" y="86.333333333333329" width="24" height="18"/>
+                                <imageReference key="image" image="car.fill" catalog="system" symbolScale="default"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-zf-IxY">
+                                <rect key="frame" x="16" y="114" width="61" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8E-2z-Jsn">
+                                <rect key="frame" x="16" y="140" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W4x-nz-UTf">
+                                <rect key="frame" x="16" y="169" width="361" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ggA-Ns-NkR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1VU-dR-X9D" firstAttribute="top" secondItem="MTO-4B-Uao" secondAttribute="bottom" constant="3" id="1nc-wp-LON"/>
+                            <constraint firstItem="MTO-4B-Uao" firstAttribute="leading" secondItem="T86-a7-2iW" secondAttribute="leading" id="6vm-xp-9AT"/>
+                            <constraint firstAttribute="trailing" secondItem="MTO-4B-Uao" secondAttribute="trailing" id="7Po-4B-J6N"/>
+                            <constraint firstItem="MTO-4B-Uao" firstAttribute="top" secondItem="T86-a7-2iW" secondAttribute="top" id="AMj-hh-hVh"/>
+                            <constraint firstItem="bGV-PZ-Eqv" firstAttribute="leading" secondItem="ggA-Ns-NkR" secondAttribute="leading" constant="16" id="K56-eB-Ycr"/>
+                            <constraint firstItem="aRs-zf-IxY" firstAttribute="leading" secondItem="ggA-Ns-NkR" secondAttribute="leading" constant="16" id="Meh-VR-ogZ"/>
+                            <constraint firstItem="W4x-nz-UTf" firstAttribute="top" secondItem="C8E-2z-Jsn" secondAttribute="bottom" constant="8" symbolic="YES" id="UkP-wv-dE6"/>
+                            <constraint firstItem="0IS-iR-mBm" firstAttribute="leading" secondItem="bGV-PZ-Eqv" secondAttribute="trailing" constant="8" id="dX2-0E-UBL"/>
+                            <constraint firstItem="bGV-PZ-Eqv" firstAttribute="top" secondItem="1VU-dR-X9D" secondAttribute="bottom" constant="8" id="dfk-jB-Zsn"/>
+                            <constraint firstItem="0IS-iR-mBm" firstAttribute="top" secondItem="1VU-dR-X9D" secondAttribute="bottom" constant="8" id="egs-Br-sOb"/>
+                            <constraint firstItem="C8E-2z-Jsn" firstAttribute="leading" secondItem="ggA-Ns-NkR" secondAttribute="leading" constant="16" id="ehN-hU-v4s"/>
+                            <constraint firstItem="1VU-dR-X9D" firstAttribute="leading" secondItem="ggA-Ns-NkR" secondAttribute="leading" constant="16" id="jaK-k5-lQz"/>
+                            <constraint firstItem="ggA-Ns-NkR" firstAttribute="trailing" secondItem="W4x-nz-UTf" secondAttribute="trailing" constant="16" id="tLw-Ni-7sJ"/>
+                            <constraint firstItem="C8E-2z-Jsn" firstAttribute="top" secondItem="aRs-zf-IxY" secondAttribute="bottom" constant="8" symbolic="YES" id="uEj-mL-1LE"/>
+                            <constraint firstItem="aRs-zf-IxY" firstAttribute="top" secondItem="0IS-iR-mBm" secondAttribute="bottom" constant="8" symbolic="YES" id="uof-Uw-leN"/>
+                            <constraint firstItem="W4x-nz-UTf" firstAttribute="leading" secondItem="ggA-Ns-NkR" secondAttribute="leading" constant="16" id="xKr-9b-iI4"/>
+                        </constraints>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nch-Wy-akY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453" y="4137"/>
         </scene>
         <!--Lista Transacciones View Controller-->
         <scene sceneID="i9f-ez-tyi">
@@ -586,7 +667,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foK-OF-qqe">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <items>
-                                    <navigationItem id="6sb-Uy-fZ9">
+                                    <navigationItem title="Detalle transacción" id="6sb-Uy-fZ9">
                                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="GDd-Kt-Oii"/>
                                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="YOM-YZ-pE2">
                                             <connections>
@@ -715,7 +796,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESl-jL-Rdf">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <items>
-                                    <navigationItem title="Nueva transacción" id="zHm-bk-Wc7">
+                                    <navigationItem title="Agregar transacción" id="zHm-bk-Wc7">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dpf-za-p2f">
                                             <connections>
                                                 <action selector="didCancelTap:" destination="8ja-eZ-5gb" id="FdF-gb-TgA"/>
@@ -873,7 +954,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-6X-Qob">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <items>
-                                    <navigationItem id="dTU-5i-TJz">
+                                    <navigationItem title="Detalle categoría" id="dTU-5i-TJz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="GeZ-mk-hbU"/>
                                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="nQb-Yl-pDX">
                                             <connections>

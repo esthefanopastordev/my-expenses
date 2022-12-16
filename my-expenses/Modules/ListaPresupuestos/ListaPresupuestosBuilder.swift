@@ -22,7 +22,7 @@ class ListaPresupuestosBuilder {
         view.title = "Presupuestos"
         
         let router = ListaPresupuestosRouter()
-        router.presenter = presenter
+        router.view = view
         
         presenter.router = router
         presenter.interactor = interactor
