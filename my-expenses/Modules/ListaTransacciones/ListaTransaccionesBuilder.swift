@@ -18,8 +18,7 @@ class ListaTransaccionesBuilder {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         let view = storyboard.instantiateViewController(withIdentifier: "ListaTransaccionesViewController") as! ListaTransaccionesViewController
-        
-        // TODO: pregunta donde va esto xd
+        view.tabBarItem.image = UIImage(systemName: "tray.fill")
         view.title = "Home"
         
         let router = ListaTransaccionesRouter()

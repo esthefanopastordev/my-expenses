@@ -18,8 +18,7 @@ class ListaPresupuestosBuilder {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         let view = storyboard.instantiateViewController(withIdentifier: "ListaPresupuestosViewController") as! ListaPresupuestosViewController
-        
-        // TODO: pregunta donde va esto xd
+        view.tabBarItem.image = UIImage(systemName: "list.bullet.clipboard.fill")
         view.title = "Presupuestos"
         
         let router = ListaPresupuestosRouter()

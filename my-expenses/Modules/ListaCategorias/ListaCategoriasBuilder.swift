@@ -18,8 +18,7 @@ class ListaCategoriasBuilder {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         let view = storyboard.instantiateViewController(withIdentifier: "ListaCategoriasViewController") as! ListaCategoriasViewController
-        
-        // TODO: pregunta donde va esto xd
+        view.tabBarItem.image = UIImage(systemName: "basket.fill")
         view.title = "Categorías"
         
         let router = ListaCategoriasRouter()

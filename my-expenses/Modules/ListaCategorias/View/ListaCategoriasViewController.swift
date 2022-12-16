@@ -37,12 +37,10 @@ class ListaCategoriasViewController: UIViewController {
 extension ListaCategoriasViewController: ListaCategoriasViewProtocol {
     func listar(_ categorias: [CategoriaResponse]) {
         self.categorias = categorias
-
         // TODO: mover la lógica a otro lado
         for tipoCategoria in Tipo.allCases {
             categorisUpdate[tipoCategoria.rawValue] = categorias.filter { $0.tipo == tipoCategoria.rawValue }
         }
-        
         categoriasTableView?.reloadData()
     }
 }
@@ -57,7 +55,8 @@ extension ListaCategoriasViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categorisUpdate.count
+        let tipoCategoria = Tipo.allCases[section].rawValue
+        return categorisUpdate[tipoCategoria]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +64,7 @@ extension ListaCategoriasViewController: UITableViewDataSource {
         
         let tipoCategoria = Tipo.allCases[indexPath.section].rawValue
         let categoria = categorisUpdate[tipoCategoria]![indexPath.row]
+        
         let category = Categoria(id: categoria.id ?? "", nombre: categoria.nombre, tipo: categoria.tipo, icono: categoria.icono)
         
         cell.setUp(from: category)
