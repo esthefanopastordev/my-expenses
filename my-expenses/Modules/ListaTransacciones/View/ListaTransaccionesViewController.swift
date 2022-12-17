@@ -8,15 +8,8 @@
 import UIKit
 import FirebaseFirestore
 
-protocol ListaTransaccionesViewProtocol: AnyObject {
-    func listar(_ transacciones: [TransaccionResponse])
-    func recargar()
-}
-
 class ListaTransaccionesViewController: UIViewController {
-    private var transacciones: [TransaccionResponse] = []
-    
-    var presenter: ListaTransaccionesPresenterProtocol?
+    var presenter: ListaTransaccionesPresenterInputProtocol?
     
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var ingresosTotalesLabel: UILabel!
@@ -25,6 +18,7 @@ class ListaTransaccionesViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         presenter?.viewWillApper()
     }
     
@@ -32,7 +26,6 @@ class ListaTransaccionesViewController: UIViewController {
         super.viewDidLoad()
         transactionsTableView.dataSource = self
         transactionsTableView.delegate = self
-        
         navigationBar.shadowImage = UIImage() // Remove default navigation bar shadow
     }
     
@@ -42,35 +35,33 @@ class ListaTransaccionesViewController: UIViewController {
 }
 
 extension ListaTransaccionesViewController: ListaTransaccionesViewProtocol {
-    func listar(_ transacciones: [TransaccionResponse]) {
-        self.transacciones = transacciones
-        transactionsTableView.reloadData()
-    }
-    
-    func recargar() {
-        presenter?.viewWillApper()
+    func showTransacciones() {
+        updateUI()
     }
 }
 
-extension ListaTransaccionesViewController: UITableViewDataSource {
+extension ListaTransaccionesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transacciones.count
+        return presenter?.numeroDeTransacciones ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell") as? TransaccionTableViewCell else { return UITableViewCell() }
-        let transaccion = transacciones[indexPath.row]
-        // TODO: cast transaction
-        let a = Transaccion(id: transaccion.id ?? "", nombre: transaccion.descripcion, cantidad: transaccion.cantidad, fecha: transaccion.fecha, categoriaId: transaccion.categoriaId, tipo: transaccion.tipo, descripcion: transaccion.nota)
-        cell.setUp(transaccion: a)
+        let transaccion = presenter?.transaccion(for: indexPath.row)
+        cell.setUp(transaccion!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension ListaTransaccionesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let transaccion = transacciones[indexPath.row]
-        presenter?.presentarDetalle(transaccion)
-        tableView.deselectRow(at: indexPath, animated: true)
+extension ListaTransaccionesViewController {
+    func updateUI() {
+        transactionsTableView.reloadData()
+        ingresosTotalesLabel.text = "$\(presenter!.ingresosTotales)"
+        gastosTotales.text = "$\(presenter!.gastosTotales)"
+        balanceLabel.text = "$\(presenter!.balanceTotal)"
     }
 }

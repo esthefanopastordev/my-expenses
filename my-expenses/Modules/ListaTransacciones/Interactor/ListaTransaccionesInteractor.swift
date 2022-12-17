@@ -7,16 +7,12 @@
 
 import Foundation
 
-protocol ListaTransaccionesInteractorProtocol {
-    func transacciones()
-}
-
 class ListaTransaccionesInteractor: ListaTransaccionesInteractorProtocol {
-    var presenter: ListaTransaccionesPresenterProtocol?
+    let presenter: ListaTransaccionesPresenterOutputProtocol
     
-    var api: RemoteRepository?
+    let api: RemoteRepository
     
-    required init(presenter: ListaTransaccionesPresenterProtocol, api: RemoteRepository) {
+    required init(presenter: ListaTransaccionesPresenterOutputProtocol, api: RemoteRepository) {
         self.presenter = presenter
         self.api = api
     }
@@ -24,8 +20,17 @@ class ListaTransaccionesInteractor: ListaTransaccionesInteractorProtocol {
     @MainActor
     func transacciones() {
         Task.init {
-            guard let transacciones = try await api?.fetchTransacciones() else { return }
-            presenter?.listar(transacciones)
+            let transacciones = await api.fetchTransacciones()
+            var mappedTransacciones: [TransaccionEntity] = []
+            for transaccion in transacciones {
+                guard let category = await api.fetchCategoria(por: transaccion.categoriaId) else { return }
+                
+                let categoria = Categoria(id: category.id!, nombre: category.nombre, tipo: category.tipo, icono: category.icono)
+                let mappedTransaccion = TransaccionEntity(id: transaccion.id!, descripcion: transaccion.descripcion, cantidad: transaccion.cantidad, fecha: transaccion.fecha, categoria: categoria, tipo: transaccion.tipo, nota: transaccion.nota)
+                
+                mappedTransacciones.append(mappedTransaccion)
+            }
+            presenter.showTransacciones(mappedTransacciones)
         }
     }
 }

@@ -34,7 +34,6 @@
 		0289AB8C294B9B230064E0D0 /* DetalleTransaccionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289AB8B294B9B230064E0D0 /* DetalleTransaccionPresenter.swift */; };
 		0289AB8E294B9B770064E0D0 /* DetalleTransaccionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289AB8D294B9B770064E0D0 /* DetalleTransaccionRouter.swift */; };
 		0289AB90294B9D1D0064E0D0 /* DetalleTransaccionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289AB8F294B9D1D0064E0D0 /* DetalleTransaccionInteractor.swift */; };
-		029E04E8294A84740021E8E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 029E04E7294A84740021E8E8 /* GoogleService-Info.plist */; };
 		029E04EE294A8E880021E8E8 /* TransaccionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E04ED294A8E880021E8E8 /* TransaccionResponse.swift */; };
 		029E04F1294A8EE10021E8E8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E04F0294A8EE10021E8E8 /* Networking.swift */; };
 		029E04F4294A95F00021E8E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 029E04F3294A95F00021E8E8 /* FirebaseFirestore */; };
@@ -68,9 +67,11 @@
 		02E79465294D0499006F60EA /* DetallePresupuestoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E79464294D0499006F60EA /* DetallePresupuestoRouter.swift */; };
 		A5A82F49293E7C6E0015B460 /* DetalleTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */; };
 		A5A82F4B293E90820015B460 /* FormTransaccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */; };
-		A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* Transaccion.swift */; };
+		A5ADEA5D293CFCB40026E583 /* ListaTransaccionesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5C293CFCB40026E583 /* ListaTransaccionesEntity.swift */; };
 		A5ADEA5F293D00110026E583 /* ListaTransaccionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */; };
 		A5ADEA63293D46E50026E583 /* TransaccionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADEA62293D46E50026E583 /* TransaccionTableViewCell.swift */; };
+		A5B35C87294D83D5000D0F3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5B35C86294D83D5000D0F3F /* GoogleService-Info.plist */; };
+		A5B35C8A294DA787000D0F3F /* ListaTransaccionesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B35C89294DA787000D0F3F /* ListaTransaccionesProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +104,6 @@
 		0289AB8B294B9B230064E0D0 /* DetalleTransaccionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionPresenter.swift; sourceTree = "<group>"; };
 		0289AB8D294B9B770064E0D0 /* DetalleTransaccionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionRouter.swift; sourceTree = "<group>"; };
 		0289AB8F294B9D1D0064E0D0 /* DetalleTransaccionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionInteractor.swift; sourceTree = "<group>"; };
-		029E04E7294A84740021E8E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		029E04ED294A8E880021E8E8 /* TransaccionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionResponse.swift; sourceTree = "<group>"; };
 		029E04F0294A8EE10021E8E8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		029E04FE294A98AE0021E8E8 /* ListaTransaccionesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesBuilder.swift; sourceTree = "<group>"; };
@@ -135,9 +135,11 @@
 		02E79464294D0499006F60EA /* DetallePresupuestoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePresupuestoRouter.swift; sourceTree = "<group>"; };
 		A5A82F48293E7C6E0015B460 /* DetalleTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTransaccionViewController.swift; sourceTree = "<group>"; };
 		A5A82F4A293E90820015B460 /* FormTransaccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTransaccionViewController.swift; sourceTree = "<group>"; };
-		A5ADEA5C293CFCB40026E583 /* Transaccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaccion.swift; sourceTree = "<group>"; };
+		A5ADEA5C293CFCB40026E583 /* ListaTransaccionesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesEntity.swift; sourceTree = "<group>"; };
 		A5ADEA5E293D00110026E583 /* ListaTransaccionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesViewController.swift; sourceTree = "<group>"; };
 		A5ADEA62293D46E50026E583 /* TransaccionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionTableViewCell.swift; sourceTree = "<group>"; };
+		A5B35C86294D83D5000D0F3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A5B35C89294DA787000D0F3F /* ListaTransaccionesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTransaccionesProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +184,7 @@
 				021BA9C9292F988300EF9FA3 /* Assets.xcassets */,
 				021BA9CB292F988300EF9FA3 /* LaunchScreen.storyboard */,
 				021BA9CE292F988300EF9FA3 /* Info.plist */,
-				029E04E7294A84740021E8E8 /* GoogleService-Info.plist */,
+				A5B35C86294D83D5000D0F3F /* GoogleService-Info.plist */,
 			);
 			path = "my-expenses";
 			sourceTree = "<group>";
@@ -382,6 +384,7 @@
 		029E04F8294A982D0021E8E8 /* ListaTransacciones */ = {
 			isa = PBXGroup;
 			children = (
+				A5B35C88294DA767000D0F3F /* Protocols */,
 				029E04F9294A983B0021E8E8 /* View */,
 				029E04FA294A98410021E8E8 /* Interactor */,
 				029E04FB294A984F0021E8E8 /* Presenter */,
@@ -420,7 +423,7 @@
 		029E04FC294A98800021E8E8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				A5ADEA5C293CFCB40026E583 /* Transaccion.swift */,
+				A5ADEA5C293CFCB40026E583 /* ListaTransaccionesEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -695,6 +698,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A5B35C88294DA767000D0F3F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A5B35C89294DA787000D0F3F /* ListaTransaccionesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -761,7 +772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				021BA9CD292F988300EF9FA3 /* LaunchScreen.storyboard in Resources */,
-				029E04E8294A84740021E8E8 /* GoogleService-Info.plist in Resources */,
+				A5B35C87294D83D5000D0F3F /* GoogleService-Info.plist in Resources */,
 				021BA9CA292F988300EF9FA3 /* Assets.xcassets in Resources */,
 				021BA9C8292F987F00EF9FA3 /* Main.storyboard in Resources */,
 			);
@@ -775,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029E050D294AD1710021E8E8 /* CategoriaResponse.swift in Sources */,
+				A5B35C8A294DA787000D0F3F /* ListaTransaccionesProtocols.swift in Sources */,
 				02E7945F294D03DC006F60EA /* DetallePresupuestoViewController.swift in Sources */,
 				0289AB88294B88EF0064E0D0 /* FormTransaccionPresenter.swift in Sources */,
 				021BA9C1292F987F00EF9FA3 /* AppDelegate.swift in Sources */,
@@ -795,7 +807,7 @@
 				02E79440294CE0A5006F60EA /* FormCategoriaPresenter.swift in Sources */,
 				02123BF82947D35900B093AD /* DetalleCategoriaViewController.swift in Sources */,
 				02E79430294CD1AE006F60EA /* DetalleCategoriaInteractor.swift in Sources */,
-				A5ADEA5D293CFCB40026E583 /* Transaccion.swift in Sources */,
+				A5ADEA5D293CFCB40026E583 /* ListaTransaccionesEntity.swift in Sources */,
 				0289AB8A294B88FC0064E0D0 /* FormTransaccionRouter.swift in Sources */,
 				02E79434294CD23C006F60EA /* DetalleCategoriaRouter.swift in Sources */,
 				029E04EE294A8E880021E8E8 /* TransaccionResponse.swift in Sources */,

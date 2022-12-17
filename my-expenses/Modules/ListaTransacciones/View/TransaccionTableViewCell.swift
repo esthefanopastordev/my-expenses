@@ -13,8 +13,6 @@ class TransaccionTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var categoryIconImageView: UIImageView!
     
-    var transaccion: Transaccion?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -23,22 +21,18 @@ class TransaccionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setUp(transaccion: Transaccion) {
-        switch transaccion.tipo {
-        case Tipo.gasto.rawValue:
-            montoLabel.text = "-$" + String(transaccion.cantidad)
+    func setUp(_ transaccion: TransaccionViewModel) {
+        if (transaccion.tipo == "Gasto") {
+            montoLabel.text = "-$\(transaccion.cantidad)"
             montoLabel.textColor = .systemRed
             categoryIconImageView.tintColor = .systemRed
-        case Tipo.ingreso.rawValue:
-            montoLabel.text = "$" + String(transaccion.cantidad)
+        } else if (transaccion.tipo == "Ingreso") {
+            montoLabel.text = "$\(transaccion.cantidad)"
             montoLabel.textColor = .systemGreen
             categoryIconImageView.tintColor = .systemGreen
-        default:
-            print("Invalid cell")
         }
-        
-        nameLabel.text = transaccion.nombre
-        
-        self.transaccion = transaccion
+
+        nameLabel.text = transaccion.descripcion
+        categoryNameLabel.text = transaccion.categoria
     }
 }

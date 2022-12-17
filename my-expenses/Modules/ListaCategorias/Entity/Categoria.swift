@@ -8,12 +8,9 @@
 import Foundation
 
 struct Categoria {
-    
     let id: String
     let nombre: String
-    var presupuesto: Double?
     let tipo: String
     let icono: String
-    
 }
 

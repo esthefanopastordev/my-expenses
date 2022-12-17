@@ -8,18 +8,15 @@
 import Foundation
 import UIKit
 
-protocol ListaTransaccionesRouterProtocol {
-    func mostrar(_ transaccion: TransaccionResponse)
-    func mostrarForm()
+class ListaTransaccionesRouter {
+    private var detalleTransaccionBuilder: DetalleTransaccionBuilder?
+    private var formTransaccionBuilder: FormTransaccionBuilder?
+    
+    var presenter: ListaTransaccionesPresenterOutputProtocol?
+    var view: UIViewController?
 }
 
-class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
-    var presenter: ListaTransaccionesPresenterProtocol?
-    var view: UIViewController?
-    
-    var detalleTransaccionBuilder: DetalleTransaccionBuilder?
-    var formTransaccionBuilder: FormTransaccionBuilder?
-    
+extension ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
     func mostrar(_ transaccion: TransaccionResponse) {
         detalleTransaccionBuilder = DetalleTransaccionBuilder()
         detalleTransaccionBuilder?.delegate = self
@@ -39,13 +36,12 @@ class ListaTransaccionesRouter: ListaTransaccionesRouterProtocol {
 
 extension ListaTransaccionesRouter: DetalleTransaccionBuilderDelegate {
     func detalleTransaccionBuilder(didDelete viewController: UIViewController) {
-        presenter?.recargar()
+        // TODO: do something
     }
 }
 
 extension ListaTransaccionesRouter: FormTransaccionBuilderDelegate {
     func formTransaccionBuilder(didCreate viewController: UIViewController) {
-        print("Me cree asies")
-        presenter?.recargar()
+        // TODO: do something
     }
 }
